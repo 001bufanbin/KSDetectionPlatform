@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B230B1F17737A00FF9090 /* AppDelegate.swift */; };
+		172B23131F17737A00FF9090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172B23121F17737A00FF9090 /* Assets.xcassets */; };
+		172B23211F17737A00FF9090 /* KSDetectionPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23201F17737A00FF9090 /* KSDetectionPlatformTests.swift */; };
+		172B232C1F17737A00FF9090 /* KSDetectionPlatformUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B232B1F17737A00FF9090 /* KSDetectionPlatformUITests.swift */; };
+		172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235B1F1779AA00FF9090 /* KSLoginViewController.swift */; };
+		172B23601F177D9C00FF9090 /* DYPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235D1F177D9C00FF9090 /* DYPTabBarController.swift */; };
+		172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */; };
+		172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */; };
+		172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23631F177DC200FF9090 /* KSConstMacros.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		172B231D1F17737A00FF9090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 172B23001F17737A00FF9090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 172B23071F17737A00FF9090;
+			remoteInfo = KSDetectionPlatform;
+		};
+		172B23281F17737A00FF9090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 172B23001F17737A00FF9090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 172B23071F17737A00FF9090;
+			remoteInfo = KSDetectionPlatform;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		172B23081F17737A00FF9090 /* KSDetectionPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDetectionPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		172B230B1F17737A00FF9090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		172B23121F17737A00FF9090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		172B23171F17737A00FF9090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172B231C1F17737A00FF9090 /* KSDetectionPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSDetectionPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		172B23201F17737A00FF9090 /* KSDetectionPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSDetectionPlatformTests.swift; sourceTree = "<group>"; };
+		172B23221F17737A00FF9090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172B23271F17737A00FF9090 /* KSDetectionPlatformUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSDetectionPlatformUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		172B232B1F17737A00FF9090 /* KSDetectionPlatformUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSDetectionPlatformUITests.swift; sourceTree = "<group>"; };
+		172B232D1F17737A00FF9090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172B235B1F1779AA00FF9090 /* KSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLoginViewController.swift; sourceTree = "<group>"; };
+		172B235D1F177D9C00FF9090 /* DYPTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPTabBarController.swift; sourceTree = "<group>"; };
+		172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseViewController.swift; sourceTree = "<group>"; };
+		172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSNavigationViewController.swift; sourceTree = "<group>"; };
+		172B23631F177DC200FF9090 /* KSConstMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSConstMacros.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		172B23051F17737A00FF9090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		172B23191F17737A00FF9090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		172B23241F17737A00FF9090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		172B22FF1F17737A00FF9090 = {
+			isa = PBXGroup;
+			children = (
+				172B230A1F17737A00FF9090 /* KSDetectionPlatform */,
+				172B231F1F17737A00FF9090 /* KSDetectionPlatformTests */,
+				172B232A1F17737A00FF9090 /* KSDetectionPlatformUITests */,
+				172B23091F17737A00FF9090 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		172B23091F17737A00FF9090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				172B23081F17737A00FF9090 /* KSDetectionPlatform.app */,
+				172B231C1F17737A00FF9090 /* KSDetectionPlatformTests.xctest */,
+				172B23271F17737A00FF9090 /* KSDetectionPlatformUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		172B230A1F17737A00FF9090 /* KSDetectionPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				172B233F1F17773400FF9090 /* KSTools */,
+				172B233A1F17773400FF9090 /* KSCommon */,
+				172B233E1F17773400FF9090 /* KSThirdSDK */,
+				172B233C1F17773400FF9090 /* KSResource */,
+				172B233D1F17773400FF9090 /* KSService */,
+				172B233B1F17773400FF9090 /* KSModel */,
+				172B23411F17778100FF9090 /* KSViewModel */,
+				172B23401F17773400FF9090 /* KSViewController */,
+				172B23391F1773AC00FF9090 /* Supporting Files */,
+			);
+			path = KSDetectionPlatform;
+			sourceTree = "<group>";
+		};
+		172B231F1F17737A00FF9090 /* KSDetectionPlatformTests */ = {
+			isa = PBXGroup;
+			children = (
+				172B23201F17737A00FF9090 /* KSDetectionPlatformTests.swift */,
+				172B23221F17737A00FF9090 /* Info.plist */,
+			);
+			path = KSDetectionPlatformTests;
+			sourceTree = "<group>";
+		};
+		172B232A1F17737A00FF9090 /* KSDetectionPlatformUITests */ = {
+			isa = PBXGroup;
+			children = (
+				172B232B1F17737A00FF9090 /* KSDetectionPlatformUITests.swift */,
+				172B232D1F17737A00FF9090 /* Info.plist */,
+			);
+			path = KSDetectionPlatformUITests;
+			sourceTree = "<group>";
+		};
+		172B23391F1773AC00FF9090 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				172B230B1F17737A00FF9090 /* AppDelegate.swift */,
+				172B23121F17737A00FF9090 /* Assets.xcassets */,
+				172B23171F17737A00FF9090 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		172B233A1F17773400FF9090 /* KSCommon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSCommon;
+			sourceTree = "<group>";
+		};
+		172B233B1F17773400FF9090 /* KSModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSModel;
+			sourceTree = "<group>";
+		};
+		172B233C1F17773400FF9090 /* KSResource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSResource;
+			sourceTree = "<group>";
+		};
+		172B233D1F17773400FF9090 /* KSService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSService;
+			sourceTree = "<group>";
+		};
+		172B233E1F17773400FF9090 /* KSThirdSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSThirdSDK;
+			sourceTree = "<group>";
+		};
+		172B233F1F17773400FF9090 /* KSTools */ = {
+			isa = PBXGroup;
+			children = (
+				172B23631F177DC200FF9090 /* KSConstMacros.swift */,
+			);
+			path = KSTools;
+			sourceTree = "<group>";
+		};
+		172B23401F17773400FF9090 /* KSViewController */ = {
+			isa = PBXGroup;
+			children = (
+				172B23551F1778F600FF9090 /* KSHome */,
+				172B23561F1778F600FF9090 /* KSLogin */,
+				172B23571F1778F600FF9090 /* KSOrder */,
+				172B23581F1778F600FF9090 /* KSSetting */,
+				172B23421F1777A900FF9090 /* KSBase */,
+			);
+			path = KSViewController;
+			sourceTree = "<group>";
+		};
+		172B23411F17778100FF9090 /* KSViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSViewModel;
+			sourceTree = "<group>";
+		};
+		172B23421F1777A900FF9090 /* KSBase */ = {
+			isa = PBXGroup;
+			children = (
+				172B23431F1777A900FF9090 /* ViewController */,
+			);
+			path = KSBase;
+			sourceTree = "<group>";
+		};
+		172B23431F1777A900FF9090 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				172B235D1F177D9C00FF9090 /* DYPTabBarController.swift */,
+				172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */,
+				172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		172B23551F1778F600FF9090 /* KSHome */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSHome;
+			sourceTree = "<group>";
+		};
+		172B23561F1778F600FF9090 /* KSLogin */ = {
+			isa = PBXGroup;
+			children = (
+				172B23591F17794600FF9090 /* View */,
+				172B235A1F17794600FF9090 /* ViewController */,
+			);
+			path = KSLogin;
+			sourceTree = "<group>";
+		};
+		172B23571F1778F600FF9090 /* KSOrder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSOrder;
+			sourceTree = "<group>";
+		};
+		172B23581F1778F600FF9090 /* KSSetting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KSSetting;
+			sourceTree = "<group>";
+		};
+		172B23591F17794600FF9090 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		172B235A1F17794600FF9090 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				172B235B1F1779AA00FF9090 /* KSLoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		172B23071F17737A00FF9090 /* KSDetectionPlatform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 172B23301F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatform" */;
+			buildPhases = (
+				172B23041F17737A00FF9090 /* Sources */,
+				172B23051F17737A00FF9090 /* Frameworks */,
+				172B23061F17737A00FF9090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSDetectionPlatform;
+			productName = KSDetectionPlatform;
+			productReference = 172B23081F17737A00FF9090 /* KSDetectionPlatform.app */;
+			productType = "com.apple.product-type.application";
+		};
+		172B231B1F17737A00FF9090 /* KSDetectionPlatformTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 172B23331F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatformTests" */;
+			buildPhases = (
+				172B23181F17737A00FF9090 /* Sources */,
+				172B23191F17737A00FF9090 /* Frameworks */,
+				172B231A1F17737A00FF9090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				172B231E1F17737A00FF9090 /* PBXTargetDependency */,
+			);
+			name = KSDetectionPlatformTests;
+			productName = KSDetectionPlatformTests;
+			productReference = 172B231C1F17737A00FF9090 /* KSDetectionPlatformTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		172B23261F17737A00FF9090 /* KSDetectionPlatformUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 172B23361F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatformUITests" */;
+			buildPhases = (
+				172B23231F17737A00FF9090 /* Sources */,
+				172B23241F17737A00FF9090 /* Frameworks */,
+				172B23251F17737A00FF9090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				172B23291F17737A00FF9090 /* PBXTargetDependency */,
+			);
+			name = KSDetectionPlatformUITests;
+			productName = KSDetectionPlatformUITests;
+			productReference = 172B23271F17737A00FF9090 /* KSDetectionPlatformUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		172B23001F17737A00FF9090 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = kris;
+				TargetAttributes = {
+					172B23071F17737A00FF9090 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = U544UZ6F95;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					172B231B1F17737A00FF9090 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = U544UZ6F95;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 172B23071F17737A00FF9090;
+					};
+					172B23261F17737A00FF9090 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = U544UZ6F95;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 172B23071F17737A00FF9090;
+					};
+				};
+			};
+			buildConfigurationList = 172B23031F17737A00FF9090 /* Build configuration list for PBXProject "KSDetectionPlatform" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 172B22FF1F17737A00FF9090;
+			productRefGroup = 172B23091F17737A00FF9090 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				172B23071F17737A00FF9090 /* KSDetectionPlatform */,
+				172B231B1F17737A00FF9090 /* KSDetectionPlatformTests */,
+				172B23261F17737A00FF9090 /* KSDetectionPlatformUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		172B23061F17737A00FF9090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				172B23131F17737A00FF9090 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		172B231A1F17737A00FF9090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		172B23251F17737A00FF9090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		172B23041F17737A00FF9090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */,
+				172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */,
+				172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */,
+				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,
+				172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */,
+				172B23601F177D9C00FF9090 /* DYPTabBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		172B23181F17737A00FF9090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				172B23211F17737A00FF9090 /* KSDetectionPlatformTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		172B23231F17737A00FF9090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				172B232C1F17737A00FF9090 /* KSDetectionPlatformUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		172B231E1F17737A00FF9090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 172B23071F17737A00FF9090 /* KSDetectionPlatform */;
+			targetProxy = 172B231D1F17737A00FF9090 /* PBXContainerItemProxy */;
+		};
+		172B23291F17737A00FF9090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 172B23071F17737A00FF9090 /* KSDetectionPlatform */;
+			targetProxy = 172B23281F17737A00FF9090 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		172B232E1F17737A00FF9090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		172B232F1F17737A00FF9090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		172B23311F17737A00FF9090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U544UZ6F95;
+				INFOPLIST_FILE = KSDetectionPlatform/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kris.KSDetectionPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		172B23321F17737A00FF9090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U544UZ6F95;
+				INFOPLIST_FILE = KSDetectionPlatform/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kris.KSDetectionPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		172B23341F17737A00FF9090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U544UZ6F95;
+				INFOPLIST_FILE = KSDetectionPlatformTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kris.KSDetectionPlatformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSDetectionPlatform.app/KSDetectionPlatform";
+			};
+			name = Debug;
+		};
+		172B23351F17737A00FF9090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U544UZ6F95;
+				INFOPLIST_FILE = KSDetectionPlatformTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kris.KSDetectionPlatformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSDetectionPlatform.app/KSDetectionPlatform";
+			};
+			name = Release;
+		};
+		172B23371F17737A00FF9090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U544UZ6F95;
+				INFOPLIST_FILE = KSDetectionPlatformUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kris.KSDetectionPlatformUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KSDetectionPlatform;
+			};
+			name = Debug;
+		};
+		172B23381F17737A00FF9090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U544UZ6F95;
+				INFOPLIST_FILE = KSDetectionPlatformUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kris.KSDetectionPlatformUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KSDetectionPlatform;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		172B23031F17737A00FF9090 /* Build configuration list for PBXProject "KSDetectionPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				172B232E1F17737A00FF9090 /* Debug */,
+				172B232F1F17737A00FF9090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		172B23301F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				172B23311F17737A00FF9090 /* Debug */,
+				172B23321F17737A00FF9090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		172B23331F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatformTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				172B23341F17737A00FF9090 /* Debug */,
+				172B23351F17737A00FF9090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		172B23361F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatformUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				172B23371F17737A00FF9090 /* Debug */,
+				172B23381F17737A00FF9090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 172B23001F17737A00FF9090 /* Project object */;
+}
