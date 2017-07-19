@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */; };
 		172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B230B1F17737A00FF9090 /* AppDelegate.swift */; };
 		172B23131F17737A00FF9090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172B23121F17737A00FF9090 /* Assets.xcassets */; };
 		172B23211F17737A00FF9090 /* KSDetectionPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23201F17737A00FF9090 /* KSDetectionPlatformTests.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeViewController.swift; sourceTree = "<group>"; };
 		172B23081F17737A00FF9090 /* KSDetectionPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDetectionPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172B230B1F17737A00FF9090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		172B23121F17737A00FF9090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172A0F101F1F6A5B0035AEE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		172A0F111F1F6A5B0035AEE8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		172B22FF1F17737A00FF9090 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +242,8 @@
 		172B23551F1778F600FF9090 /* KSHome */ = {
 			isa = PBXGroup;
 			children = (
+				172A0F101F1F6A5B0035AEE8 /* View */,
+				172A0F111F1F6A5B0035AEE8 /* ViewController */,
 			);
 			path = KSHome;
 			sourceTree = "<group>";
@@ -408,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */,
+				172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */,
 				172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */,
 				172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */,
 				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,
@@ -650,6 +670,7 @@
 				172B23321F17737A00FF9090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		172B23331F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatformTests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +679,7 @@
 				172B23351F17737A00FF9090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		172B23361F17737A00FF9090 /* Build configuration list for PBXNativeTarget "KSDetectionPlatformUITests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +688,7 @@
 				172B23381F17737A00FF9090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

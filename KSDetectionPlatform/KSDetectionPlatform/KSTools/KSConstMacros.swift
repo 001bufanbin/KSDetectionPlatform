@@ -92,6 +92,42 @@ let kTextBoldFont =     "Helvetica-Bold"
  */
 let USERDEFAULT =       UserDefaults.standard
 
+
+/************** function ****************/
+
+/**
+ *  RGBCOLOR
+ *  RGBCOLOR(100, 100, 100)
+ *  RGBACOLOR(100, 100, 100, 0.5)
+ *  RGBVCOLOR(0x029588)
+ *
+ */
+func RGBCOLOR(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor
+{
+    return UIColor(red: (red)/255, green: (green)/255, blue: (blue)/255, alpha: 1)
+}
+
+func RGBACOLOR(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat , _ alpha: CGFloat) -> UIColor
+{
+    return UIColor(red: (red)/255, green: (green)/255, blue: (blue)/255, alpha: alpha)
+}
+
+func RGBVCOLOR(_ rgbValue: CLong) -> UIColor
+{
+    return UIColor(red: (CGFloat((rgbValue & 0xFF0000) >> 16))/255,
+                   green: (CGFloat((rgbValue & 0xFF00) >> 8))/255,
+                   blue: (CGFloat(rgbValue & 0xFF))/255,
+                   alpha: 1)
+}
+
+func RGBVACOLOR(_ rgbValue: CLong, _ alpha: CGFloat) -> UIColor
+{
+    return UIColor(red: (CGFloat((rgbValue & 0xFF0000) >> 16))/255,
+                   green: (CGFloat((rgbValue & 0xFF00) >> 8))/255,
+                   blue: (CGFloat(rgbValue & 0xFF))/255,
+                   alpha: alpha)
+}
+
 /**
  *  NSLOG (WHEN DUBUG DOES NOT OUTPUT)
  */

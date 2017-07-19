@@ -35,7 +35,7 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            //self.view.backgroundColor = RGBCOLOR(237, 237, 237)
+            self.view.backgroundColor = RGBVCOLOR(0xf8f8f8)
             self.initNavigationBar()
             self.setNavTitleAndBtn()
             // Do any additional setup after loading the view.
@@ -56,6 +56,7 @@
             let rectTitle = CGRect(x: 0, y: 0, width: kFrameStruct.navTitleBtn_W, height: kNaviBarHeight)
             let rectRight = CGRect(x: 0, y: 0, width: kFrameStruct.navLeftAndRightBtn_W, height: kNaviBarHeight)
             btnLeft = UIButton(frame: rectLeft)
+            btnLeft.backgroundColor = UIColor.red
             btnRight = UIButton(frame: rectRight)
             btnTitle = UIButton(frame: rectTitle)
             //设置响应函数
@@ -398,13 +399,12 @@
 //            }
         }
 //
-//        override func didReceiveMemoryWarning() {
-//            super.didReceiveMemoryWarning()
-//            // Dispose of any resources that can be recreated.
-//        }
-//        
-//        deinit{
-//            //print("deinit == %@", self.classForCoder)
-//            printLog(message: "== deinit == ");
-//        }
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+//
+        deinit{
+            printLog(message: "== deinit == \(String(describing: type(of: self)))")
+        }
     }
