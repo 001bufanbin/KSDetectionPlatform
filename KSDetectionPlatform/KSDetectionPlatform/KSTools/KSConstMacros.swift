@@ -74,7 +74,7 @@ let kAppBundleVersion = Bundle.main.infoDictionary?["CFBundleVersion"]
  *
  */
 let kStatusBarHeight: CGFloat = 20.0
-let kNaviBarHeight: CGFloat =   44.0
+let kNavBarHeight: CGFloat =   44.0
 let kTabBarHeight: CGFloat =    49.0
 let kAppHeight: CGFloat =       UIScreen.main.bounds.size.height
 let kAppWidth: CGFloat =        UIScreen.main.bounds.size.width

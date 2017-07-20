@@ -17,10 +17,16 @@ class KSLoginViewController: KSBaseViewController {
         self.initContainsView()
         
     }
+    
+    override func setNavTitleAndBtn() {
+        self.setTitleBtn(strTitle: "登录", enable: false, imgNor: "", imgSel: "")
+        self.setGoBackBtn(strTitle: "", hidden: true, imgNor: "backButton.png", imgSel: "backButton.png")
+        self.setRightBtn(strTitle: "", hidden: true, imgNor: "", imgSel: "")
+    }
 
     func initContainsView() {
         let btnLogin = UIButton(frame: CGRect(x: 10, y: 44+20+40, width: 60, height: 40))
-        btnLogin.backgroundColor = UIColor.red
+        btnLogin.backgroundColor = UIColor.yellow
         btnLogin.setTitleColor(UIColor.black, for: .normal)
         btnLogin.setTitle("登录", for: .normal)
         
@@ -30,7 +36,7 @@ class KSLoginViewController: KSBaseViewController {
     }
     
     func handlerBtnLogin(_ btn: UIButton) -> Void {
-        printLog(message: "loging btn Clicked")
+        printLog(message: "login btn Clicked")
         let homeVC = KSHomeViewController()
         self.navigationController?.pushViewController(homeVC, animated: true)
         

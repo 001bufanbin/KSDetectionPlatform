@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */; };
+		172A0F151F205DD80035AEE8 /* KSTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A0F141F205DD80035AEE8 /* KSTools.swift */; };
+		172A0F191F20820B0035AEE8 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F171F20820B0035AEE8 /* backButton@2x.png */; };
+		172A0F1A1F20820B0035AEE8 /* backButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F181F20820B0035AEE8 /* backButton@3x.png */; };
 		172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B230B1F17737A00FF9090 /* AppDelegate.swift */; };
 		172B23131F17737A00FF9090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172B23121F17737A00FF9090 /* Assets.xcassets */; };
 		172B23211F17737A00FF9090 /* KSDetectionPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23201F17737A00FF9090 /* KSDetectionPlatformTests.swift */; };
 		172B232C1F17737A00FF9090 /* KSDetectionPlatformUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B232B1F17737A00FF9090 /* KSDetectionPlatformUITests.swift */; };
 		172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235B1F1779AA00FF9090 /* KSLoginViewController.swift */; };
-		172B23601F177D9C00FF9090 /* DYPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235D1F177D9C00FF9090 /* DYPTabBarController.swift */; };
 		172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */; };
 		172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */; };
 		172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23631F177DC200FF9090 /* KSConstMacros.swift */; };
@@ -38,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeViewController.swift; sourceTree = "<group>"; };
+		172A0F141F205DD80035AEE8 /* KSTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSTools.swift; sourceTree = "<group>"; };
+		172A0F171F20820B0035AEE8 /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
+		172A0F181F20820B0035AEE8 /* backButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@3x.png"; sourceTree = "<group>"; };
 		172B23081F17737A00FF9090 /* KSDetectionPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDetectionPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172B230B1F17737A00FF9090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		172B23121F17737A00FF9090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,7 +54,6 @@
 		172B232B1F17737A00FF9090 /* KSDetectionPlatformUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSDetectionPlatformUITests.swift; sourceTree = "<group>"; };
 		172B232D1F17737A00FF9090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		172B235B1F1779AA00FF9090 /* KSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLoginViewController.swift; sourceTree = "<group>"; };
-		172B235D1F177D9C00FF9090 /* DYPTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPTabBarController.swift; sourceTree = "<group>"; };
 		172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseViewController.swift; sourceTree = "<group>"; };
 		172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSNavigationViewController.swift; sourceTree = "<group>"; };
 		172B23631F177DC200FF9090 /* KSConstMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSConstMacros.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 				172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		172A0F161F20820B0035AEE8 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				172A0F171F20820B0035AEE8 /* backButton@2x.png */,
+				172A0F181F20820B0035AEE8 /* backButton@3x.png */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 		172B22FF1F17737A00FF9090 = {
@@ -176,6 +189,7 @@
 		172B233C1F17773400FF9090 /* KSResource */ = {
 			isa = PBXGroup;
 			children = (
+				172A0F161F20820B0035AEE8 /* common */,
 			);
 			path = KSResource;
 			sourceTree = "<group>";
@@ -198,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				172B23631F177DC200FF9090 /* KSConstMacros.swift */,
+				172A0F141F205DD80035AEE8 /* KSTools.swift */,
 			);
 			path = KSTools;
 			sourceTree = "<group>";
@@ -232,7 +247,6 @@
 		172B23431F1777A900FF9090 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				172B235D1F177D9C00FF9090 /* DYPTabBarController.swift */,
 				172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */,
 				172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */,
 			);
@@ -402,6 +416,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				172B23131F17737A00FF9090 /* Assets.xcassets in Resources */,
+				172A0F1A1F20820B0035AEE8 /* backButton@3x.png in Resources */,
+				172A0F191F20820B0035AEE8 /* backButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,13 +442,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172A0F151F205DD80035AEE8 /* KSTools.swift in Sources */,
 				172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */,
 				172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */,
 				172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */,
 				172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */,
 				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,
 				172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */,
-				172B23601F177D9C00FF9090 /* DYPTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
