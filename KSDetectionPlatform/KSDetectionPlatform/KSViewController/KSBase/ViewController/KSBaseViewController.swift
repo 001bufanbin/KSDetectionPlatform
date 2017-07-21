@@ -8,12 +8,12 @@
     
     import UIKit
     
+    /// 导航栏有有按钮宽度
+    let kNavBtnLeftAndRight_W: CGFloat = 60.0
+    /// 导航栏标题按钮宽度
+    let kNavBtnTitle_W: CGFloat        = 80.0
+    
     class KSBaseViewController: UIViewController, UINavigationControllerDelegate {
-        
-        struct kFrameStruct {
-            static let navBtnLeftAndRight_W: CGFloat = 60.0
-            static let navBtnTitle_W: CGFloat        = 80.0
-        }
         
         var btnTitle: UIButton!
         var btnLeft: UIButton!
@@ -41,17 +41,17 @@
         //MARK: - 导航相关
         private func initNavigationBar() {
             //导航栏返回按钮
-            let rectLeft  = CGRect(x: 0, y: 0, width: kFrameStruct.navBtnLeftAndRight_W, height: kNavBarHeight)
+            let rectLeft  = CGRect(x: 0, y: 0, width: kNavBtnLeftAndRight_W, height: kNavBarHeight)
             btnLeft = self.createBtn(frame: rectLeft)
             btnLeft.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
             btnLeft.addTarget(self, action: #selector(goBackBtnClickHandler(_:)), for: .touchUpInside)
             //导航栏标题按钮
-            let rectTitle = CGRect(x: 0, y: 0, width: kFrameStruct.navBtnTitle_W, height: kNavBarHeight)
+            let rectTitle = CGRect(x: 0, y: 0, width: kNavBtnTitle_W, height: kNavBarHeight)
             btnTitle = self.createBtn(frame: rectTitle)
-            btnTitle.titleLabel?.font = KSTools.setFont(18)
+            btnTitle.titleLabel?.font = KSFont(18)
             btnTitle.addTarget(self, action: #selector(titleBtnClickedHandeler(_:)), for: .touchUpInside)
             //导航栏右边按钮
-            let rectRight = CGRect(x: 0, y: 0, width: kFrameStruct.navBtnLeftAndRight_W, height: kNavBarHeight)
+            let rectRight = CGRect(x: 0, y: 0, width: kNavBtnLeftAndRight_W, height: kNavBarHeight)
             btnRight = self.createBtn(frame: rectRight)
             btnRight.addTarget(self, action: #selector(rightBtnClickedHandeler(_:)), for: .touchUpInside)
             //导航赋值
@@ -64,7 +64,7 @@
             let button = UIButton(frame: frame)
             button.setTitleColor(UIColor.white, for: UIControlState.normal)
             button.titleLabel?.textAlignment = .center
-            button.titleLabel?.font = KSTools.setFont(16);
+            button.titleLabel?.font = KSFont(16)
             return button
         }
 
@@ -117,7 +117,16 @@
         func rightBtnClickedHandeler(_ sender: UIButton ) {
             
         }
+        
+        //MARK: - 页面点击取消编辑
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
 //        func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
 //            if navigationController is KSNavigationViewController {
 //                let coordinator: UIViewControllerTransitionCoordinator? = navigationController.topViewController?.transitionCoordinator
