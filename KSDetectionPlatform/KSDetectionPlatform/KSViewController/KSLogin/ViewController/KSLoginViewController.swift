@@ -33,23 +33,17 @@ class KSLoginViewController: KSBaseViewController {
     }
 
     func initContainsView() {
-//        let btnLogin = UIButton(frame: CGRect(x: 10, y: 44+20+40, width: 60, height: 40))
-//        btnLogin.backgroundColor = UIColor.yellow
-//        btnLogin.setTitleColor(UIColor.black, for: .normal)
-//        btnLogin.setTitle("登录", for: .normal)
-//        
-//        btnLogin.addTarget(self, action:#selector(handlerBtnLogin(_:)) , for: .touchUpInside)
-//        
-//        self.view.addSubview(btnLogin)
         loginView = KSLoginView(frame: CGRect(x: 0, y: 0, width: kAppWidth, height: kAppHeight))
+        loginView.loginButton.addTarget(self, action: #selector(btnLoginDidClick(_:)), for: .touchUpInside)
         self.view.addSubview(loginView)
     }
     
-//    func handlerBtnLogin(_ btn: UIButton) -> Void {
-//        printLog(message: "login btn Clicked")
-//        let homeVC = KSHomeViewController()
-//        self.navigationController?.pushViewController(homeVC, animated: true)
-//        
-//    }
+    //
+    func btnLoginDidClick(_ sender: UIButton) -> Void {
+        self.endEdit()
+        let homeVC: KSHomeViewController = KSHomeViewController()
+        self.navigationController?.pushViewController(homeVC, animated: true)
+        
+    }
     
 }

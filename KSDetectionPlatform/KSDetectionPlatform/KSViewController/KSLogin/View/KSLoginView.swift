@@ -78,7 +78,7 @@ class KSLoginView: UIView {
     //MARK: 顶部视图
     func initHeadView() -> Void {
         imgViewHead = UIImageView(frame: CGRect.zero)
-        imgViewHead.image = UIImage(named: "JZGOffice_Login_HeadLogo.png")
+        imgViewHead.image = LOADPATHIMAGE("JZGOffice_Login_HeadLogo.png")
         self.addSubview(imgViewHead)
     }
     
@@ -125,8 +125,9 @@ class KSLoginView: UIView {
         viewContent.addSubview(passWordTextField)
         
         btnSecret = UIButton(frame: CGRect.zero)
-        //btnSecret.setImage(LOADIMAGE("JZGOffice_Login_BtnSecret.png"), for: .normal)
-        //btnSecret.setImage(LOADIMAGE("JZGOffice_Login_BtnUnSecret.png"), for: .selected)
+        //btnSecret.setImage(LOADIMAGE("JZGOffice_Login_BtnSecret", "png"), for: .normal)
+        btnSecret.setImage(LOADPATHIMAGE("JZGOffice_Login_BtnSecret.png"), for: .normal)
+        btnSecret.setImage(LOADPATHIMAGE("JZGOffice_Login_BtnUnSecret.png"), for: .selected)
         btnSecret.addTarget(self, action: #selector(btnSectetClicked(_:)), for: .touchUpInside)
         viewContent.addSubview(btnSecret)
         

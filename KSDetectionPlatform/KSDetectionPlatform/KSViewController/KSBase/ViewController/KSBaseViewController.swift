@@ -81,8 +81,8 @@
                 return;
             }
             btnTitle.setTitle(strTitle, for: .normal)
-            btnTitle.setImage(UIImage(named: imgNor), for: .normal)
-            btnTitle.setImage(UIImage(named: imgSel), for: .selected)
+            btnTitle.setImage(LOADPATHIMAGE(imgNor), for: .normal)
+            btnTitle.setImage(LOADPATHIMAGE(imgSel), for: .selected)
         }
         
         func setGoBackBtn(strTitle: String, hidden: Bool, imgNor: String, imgSel: String) {
@@ -91,8 +91,8 @@
                 return;
             }
             btnLeft.setTitle(strTitle, for: .normal)
-            btnLeft.setImage(UIImage(named: imgNor), for: .normal)
-            btnLeft.setImage(UIImage(named: imgSel), for: .selected)
+            btnLeft.setImage(LOADPATHIMAGE(imgNor), for: .normal)
+            btnLeft.setImage(LOADPATHIMAGE(imgSel), for: .selected)
             btnLeft.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0)
         }
         
@@ -102,8 +102,8 @@
                 return
             }
             btnRight.setTitle(strTitle, for: .normal)
-            btnRight.setImage(UIImage(named: imgNor), for: .normal)
-            btnRight.setImage(UIImage(named: imgSel), for: .selected)
+            btnRight.setImage(LOADPATHIMAGE(imgNor), for: .normal)
+            btnRight.setImage(LOADPATHIMAGE(imgSel), for: .selected)
         }
         
         //MARK: - 导航栏响应函数
@@ -120,6 +120,10 @@
         
         //MARK: - 页面点击取消编辑
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
+        
+        final func endEdit() -> Void {
             self.view.endEditing(true)
         }
 

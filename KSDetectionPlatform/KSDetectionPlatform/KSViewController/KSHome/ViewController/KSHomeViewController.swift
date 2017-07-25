@@ -16,4 +16,10 @@ class KSHomeViewController: KSBaseViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func setNavTitleAndBtn() {
+        self.setGoBackBtn(strTitle: "", hidden: true, imgNor: "", imgSel: "")
+        self.setTitleBtn(strTitle: "主页", enable: false, imgNor: "", imgSel: "")
+        self.setRightBtn(strTitle: "", hidden: true, imgNor: "", imgSel: "")
+    }
+    
 }

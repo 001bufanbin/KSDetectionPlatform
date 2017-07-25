@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171E6D291F273B9000360D7F /* JZGOffice_Login_BtnSecret@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D231F273B9000360D7F /* JZGOffice_Login_BtnSecret@2x.png */; };
+		171E6D2A1F273B9000360D7F /* JZGOffice_Login_BtnSecret@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D241F273B9000360D7F /* JZGOffice_Login_BtnSecret@3x.png */; };
+		171E6D2B1F273B9000360D7F /* JZGOffice_Login_HeadLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D251F273B9000360D7F /* JZGOffice_Login_HeadLogo@2x.png */; };
+		171E6D2C1F273B9000360D7F /* JZGOffice_Login_HeadLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D261F273B9000360D7F /* JZGOffice_Login_HeadLogo@3x.png */; };
+		171E6D2D1F273B9000360D7F /* JZGOffice_Login_underLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D271F273B9000360D7F /* JZGOffice_Login_underLogo@2x.png */; };
+		171E6D2E1F273B9000360D7F /* JZGOffice_Login_underLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D281F273B9000360D7F /* JZGOffice_Login_underLogo@3x.png */; };
+		171E6D391F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D371F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@2x.png */; };
+		171E6D3A1F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E6D381F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@3x.png */; };
 		172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */; };
 		172A0F151F205DD80035AEE8 /* KSTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A0F141F205DD80035AEE8 /* KSTools.swift */; };
 		172A0F191F20820B0035AEE8 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F171F20820B0035AEE8 /* backButton@2x.png */; };
 		172A0F1A1F20820B0035AEE8 /* backButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F181F20820B0035AEE8 /* backButton@3x.png */; };
 		172A0F1C1F209D120035AEE8 /* KSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A0F1B1F209D120035AEE8 /* KSLoginView.swift */; };
-		172A0F221F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F1E1F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@2x.png */; };
-		172A0F231F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F1F1F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@3x.png */; };
-		172A0F241F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F201F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@2x.png */; };
-		172A0F251F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 172A0F211F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@3x.png */; };
 		172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B230B1F17737A00FF9090 /* AppDelegate.swift */; };
 		172B23131F17737A00FF9090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172B23121F17737A00FF9090 /* Assets.xcassets */; };
 		172B23211F17737A00FF9090 /* KSDetectionPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23201F17737A00FF9090 /* KSDetectionPlatformTests.swift */; };
@@ -44,15 +48,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171E6D231F273B9000360D7F /* JZGOffice_Login_BtnSecret@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_BtnSecret@2x.png"; sourceTree = "<group>"; };
+		171E6D241F273B9000360D7F /* JZGOffice_Login_BtnSecret@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_BtnSecret@3x.png"; sourceTree = "<group>"; };
+		171E6D251F273B9000360D7F /* JZGOffice_Login_HeadLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_HeadLogo@2x.png"; sourceTree = "<group>"; };
+		171E6D261F273B9000360D7F /* JZGOffice_Login_HeadLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_HeadLogo@3x.png"; sourceTree = "<group>"; };
+		171E6D271F273B9000360D7F /* JZGOffice_Login_underLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_underLogo@2x.png"; sourceTree = "<group>"; };
+		171E6D281F273B9000360D7F /* JZGOffice_Login_underLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_underLogo@3x.png"; sourceTree = "<group>"; };
+		171E6D371F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_BtnUnSecret@2x.png"; sourceTree = "<group>"; };
+		171E6D381F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_BtnUnSecret@3x.png"; sourceTree = "<group>"; };
 		172A0F121F1F6A6D0035AEE8 /* KSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeViewController.swift; sourceTree = "<group>"; };
 		172A0F141F205DD80035AEE8 /* KSTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSTools.swift; sourceTree = "<group>"; };
 		172A0F171F20820B0035AEE8 /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
 		172A0F181F20820B0035AEE8 /* backButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@3x.png"; sourceTree = "<group>"; };
 		172A0F1B1F209D120035AEE8 /* KSLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLoginView.swift; sourceTree = "<group>"; };
-		172A0F1E1F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_HeadLogo@2x.png"; sourceTree = "<group>"; };
-		172A0F1F1F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_HeadLogo@3x.png"; sourceTree = "<group>"; };
-		172A0F201F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_underLogo@2x.png"; sourceTree = "<group>"; };
-		172A0F211F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JZGOffice_Login_underLogo@3x.png"; sourceTree = "<group>"; };
 		172B23081F17737A00FF9090 /* KSDetectionPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDetectionPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172B230B1F17737A00FF9090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		172B23121F17737A00FF9090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +102,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171E6D221F273B9000360D7F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				171E6D371F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@2x.png */,
+				171E6D381F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@3x.png */,
+				171E6D231F273B9000360D7F /* JZGOffice_Login_BtnSecret@2x.png */,
+				171E6D241F273B9000360D7F /* JZGOffice_Login_BtnSecret@3x.png */,
+				171E6D251F273B9000360D7F /* JZGOffice_Login_HeadLogo@2x.png */,
+				171E6D261F273B9000360D7F /* JZGOffice_Login_HeadLogo@3x.png */,
+				171E6D271F273B9000360D7F /* JZGOffice_Login_underLogo@2x.png */,
+				171E6D281F273B9000360D7F /* JZGOffice_Login_underLogo@3x.png */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		172A0F101F1F6A5B0035AEE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,17 +139,6 @@
 				172A0F181F20820B0035AEE8 /* backButton@3x.png */,
 			);
 			path = common;
-			sourceTree = "<group>";
-		};
-		172A0F1D1F20FDEC0035AEE8 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				172A0F1E1F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@2x.png */,
-				172A0F1F1F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@3x.png */,
-				172A0F201F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@2x.png */,
-				172A0F211F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@3x.png */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		172B22FF1F17737A00FF9090 = {
@@ -210,7 +222,7 @@
 		172B233C1F17773400FF9090 /* KSResource */ = {
 			isa = PBXGroup;
 			children = (
-				172A0F1D1F20FDEC0035AEE8 /* Login */,
+				171E6D221F273B9000360D7F /* Login */,
 				172A0F161F20820B0035AEE8 /* common */,
 			);
 			path = KSResource;
@@ -438,12 +450,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172A0F251F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@3x.png in Resources */,
+				171E6D2A1F273B9000360D7F /* JZGOffice_Login_BtnSecret@3x.png in Resources */,
+				171E6D2C1F273B9000360D7F /* JZGOffice_Login_HeadLogo@3x.png in Resources */,
+				171E6D2B1F273B9000360D7F /* JZGOffice_Login_HeadLogo@2x.png in Resources */,
 				172B23131F17737A00FF9090 /* Assets.xcassets in Resources */,
-				172A0F221F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@2x.png in Resources */,
+				171E6D2D1F273B9000360D7F /* JZGOffice_Login_underLogo@2x.png in Resources */,
 				172A0F1A1F20820B0035AEE8 /* backButton@3x.png in Resources */,
-				172A0F231F20FDEC0035AEE8 /* JZGOffice_Login_HeadLogo@3x.png in Resources */,
-				172A0F241F20FDEC0035AEE8 /* JZGOffice_Login_underLogo@2x.png in Resources */,
+				171E6D291F273B9000360D7F /* JZGOffice_Login_BtnSecret@2x.png in Resources */,
+				171E6D2E1F273B9000360D7F /* JZGOffice_Login_underLogo@3x.png in Resources */,
+				171E6D391F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@2x.png in Resources */,
+				171E6D3A1F273E4000360D7F /* JZGOffice_Login_BtnUnSecret@3x.png in Resources */,
 				172A0F191F20820B0035AEE8 /* backButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,12 +487,12 @@
 			files = (
 				172A0F151F205DD80035AEE8 /* KSTools.swift in Sources */,
 				172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */,
-				172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */,
 				172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */,
+				172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */,
 				172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */,
 				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,
 				172A0F1C1F209D120035AEE8 /* KSLoginView.swift in Sources */,
-				172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */,
+				172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

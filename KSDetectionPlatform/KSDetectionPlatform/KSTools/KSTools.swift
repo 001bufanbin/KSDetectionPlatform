@@ -9,17 +9,20 @@
 import UIKit
 
 /**
+ *  适用：重复性不高+大图，内存可释放，已经加载过的会重复加载
+ *  LOADPATHIMAGE("test.png")
  *
- *
- *
+ *  适用：重复性高+小图，内存不能释放，已经加载过的不会重复加载
+ *  LOADIMAGENAMED("test.png")
  */
 
-func LOADIMAGE(_ named: String) -> UIImage {
-    let imgPath = Bundle.main.path(forResource: named, ofType: "")
-    return UIImage(contentsOfFile: imgPath!)!
-    
-//    NSString *path =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"login.png"];
-//    BGimageView.image = [UIImage imageWithContentsOfFile:path];
+func LOADPATHIMAGE(_ named: String) -> UIImage? {
+    let imgPath = Bundle.main.resourcePath! + ("/") + (named)
+    return UIImage(contentsOfFile: imgPath)
+}
+
+func LOADNAMEDIMAGE(_ named: String) -> UIImage? {
+    return UIImage(named:named)
 }
 
 /**
