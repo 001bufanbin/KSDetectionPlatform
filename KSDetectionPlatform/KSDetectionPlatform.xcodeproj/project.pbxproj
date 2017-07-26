@@ -28,6 +28,7 @@
 		172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */; };
 		172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */; };
 		172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23631F177DC200FF9090 /* KSConstMacros.swift */; };
+		1777011F1F2873D100A9725B /* KSSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1777011E1F2873D100A9725B /* KSSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseViewController.swift; sourceTree = "<group>"; };
 		172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSNavigationViewController.swift; sourceTree = "<group>"; };
 		172B23631F177DC200FF9090 /* KSConstMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSConstMacros.swift; sourceTree = "<group>"; };
+		1777011E1F2873D100A9725B /* KSSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 		172B23581F1778F600FF9090 /* KSSetting */ = {
 			isa = PBXGroup;
 			children = (
+				1777011E1F2873D100A9725B /* KSSettingViewController.swift */,
 			);
 			path = KSSetting;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,
 				172A0F1C1F209D120035AEE8 /* KSLoginView.swift in Sources */,
 				172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */,
+				1777011F1F2873D100A9725B /* KSSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

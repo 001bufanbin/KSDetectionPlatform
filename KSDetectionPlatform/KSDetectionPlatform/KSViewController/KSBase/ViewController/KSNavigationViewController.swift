@@ -33,8 +33,9 @@ class KSNavigationViewController: UINavigationController, UIGestureRecognizerDel
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if gestureRecognizer is UIScreenEdgePanGestureRecognizer {
             if (self.viewControllers.count == 1 ||
-                self.topViewController is KSLoginViewController ||
-                self.topViewController is KSHomeViewController) {
+                self.topViewController is KSLoginViewController ) {
+                //||
+                //    self.topViewController is KSHomeViewController
                 return false
             }
         }

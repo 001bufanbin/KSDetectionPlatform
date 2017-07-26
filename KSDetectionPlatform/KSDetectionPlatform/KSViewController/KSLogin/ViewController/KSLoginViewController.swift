@@ -27,8 +27,8 @@ class KSLoginViewController: KSBaseViewController {
     }
     
     override func setNavTitleAndBtn() {
-        self.setTitleBtn(strTitle: "登录", enable: false, imgNor: "", imgSel: "")
         self.setGoBackBtn(strTitle: "", hidden: true, imgNor: "backButton.png", imgSel: "backButton.png")
+        self.setTitleBtn(strTitle: "登录", enable: false, imgNor: "", imgSel: "")
         self.setRightBtn(strTitle: "", hidden: true, imgNor: "", imgSel: "")
     }
 

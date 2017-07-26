@@ -24,6 +24,11 @@
             printLog(message: "deinit == \(String(describing: type(of: self)))")
         }
         
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+        
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -59,7 +64,7 @@
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btnLeft)
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btnRight)
         }
-
+        
         private func createBtn(frame: CGRect) -> UIButton {
             let button = UIButton(frame: frame)
             button.setTitleColor(UIColor.white, for: UIControlState.normal)
@@ -67,7 +72,7 @@
             button.titleLabel?.font = KSFont(16)
             return button
         }
-
+        
         //MARK: - 导航栏元素赋值
         func setNavTitleAndBtn() {
             self.setTitleBtn(strTitle: "KSBase", enable: false, imgNor: "", imgSel: "")
@@ -112,7 +117,7 @@
         }
         func goBackBtnClickHandler(_ sender: UIButton) {
             _ = self.navigationController?.popViewController(animated: true)
-            //self.releaseRequestTasks()
+            self.releaseRequestTasks()
         }
         func rightBtnClickedHandeler(_ sender: UIButton ) {
             
@@ -126,77 +131,69 @@
         final func endEdit() -> Void {
             self.view.endEditing(true)
         }
-
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
+        
+        // MARK: - UINavigationControllerDelegate
+        func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+            if navigationController is KSNavigationViewController {
+                if let coordinator = navigationController.topViewController?.transitionCoordinator {
+                    if coordinator.initiallyInteractive {
+                        coordinator.notifyWhenInteractionEnds({ (context) in
+                            if (coordinator.isCancelled == false) {
+                                let fromVC = context.viewController(forKey: UITransitionContextViewControllerKey.from)
+                                if let baseVC: KSBaseViewController = fromVC as? KSBaseViewController {
+                                    baseVC.releaseRequestTasks()
+                                }
+                            }
+//                            //手势返回，打印栈内元素情况
+//                            printLog(message: "isAnimated == \(context.isAnimated)")
+//                            printLog(message: "presentationStyle == \(context.presentationStyle)")
+//                            printLog(message: "initiallyInteractive == \(context.initiallyInteractive)")
+//                            printLog(message: "isInteractive == \(context.isInteractive)")
+//                            printLog(message: "isCancelled == \(context.isCancelled)")
+//                            printLog(message: "transitionDuration == \(context.transitionDuration)")
+//                            printLog(message: "percentComplete == \(context.percentComplete)")
+//                            printLog(message: "completionVelocity == \(context.completionVelocity)")
+//                            printLog(message: "completionCurve == \(context.completionCurve)")
+//                            printLog(message: "From VC == \(String(describing: context.viewController(forKey: UITransitionContextViewControllerKey.from)))")
+//                            printLog(message: "To VC == \(String(describing: context.viewController(forKey: UITransitionContextViewControllerKey.to)))")
+//                            printLog(message: "From View == \(String(describing: context.view(forKey: UITransitionContextViewKey.from)))")
+//                            printLog(message: "To View == \(String(describing: context.view(forKey: UITransitionContextViewKey.to)))")
+//                            printLog(message: "Container View == \(context.containerView)")
+//                            printLog(message: "targetTransform == \(context.targetTransform)")
+                        })
+                    }
+                }
+            }
         }
-//        func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-//            if navigationController is KSNavigationViewController {
-//                let coordinator: UIViewControllerTransitionCoordinator? = navigationController.topViewController?.transitionCoordinator
-//                if (coordinator != nil && (coordinator?.initiallyInteractive)!) {
-//                    coordinator?.notifyWhenInteractionEnds({ (context) in
-//                        if (coordinator?.isCancelled)! {
-//                            var baseVC: KSBaseViewController!
-//                            let fromVC: UIViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
-//                            if fromVC is KSBaseViewController{
-//                                baseVC = (fromVC as! KSBaseViewController)
-//                            } else if (fromVC is DYPTabBarController){
-//                                let tabVC: DYPTabBarController = (fromVC as! DYPTabBarController)
-//                                baseVC = (tabVC.selectedViewController as! KSBaseViewController)
-//                            }
-//                            baseVC.releaseRequestTasks()
-//                        }
-//                    })
-//                }
-//            }
-//        }
-//        
-//        /**
-//         *  统一处理错误码
-//         *
-//         */
-//        func manageErrorStatus(strStatus: String, strMsg: String) {
-//            self.stopLoading()
-//            if strStatus == "-2" {
-//                self.logoutAndClearData()
-//                return
-//            } else {
-//                self.showPrompt(prompt: strMsg)
-//            }
-//        }
-//        
-//        /**
-//         *  统一处理请求失败
-//         *
-//         */
-//        func manageFailStatus() {
-//            self.stopLoading()
-//            self.showPrompt(prompt: "网络不给力，请稍后再试")
-//        }
-//        
-//        func logoutAndClearData() {
-//            KSGlobal.shareInstance().clearLoginData()
-//            
-//            let rootVC = self.navigationController?.viewControllers[0]
-//            if rootVC is DYPLoginViewController {
-//                _ = self.navigationController?.popToRootViewController(animated: true)
-//                let loginVC: DYPLoginViewController = rootVC as! DYPLoginViewController
-//                loginVC.logOutPopToRoot()
-//            } else if rootVC is DYPTabBarController {
-//                let loginVC: DYPLoginViewController = DYPLoginViewController()
-//                let arrVCs: Array = [loginVC]
-//                rootVC?.navigationController?.setViewControllers(arrVCs, animated: true)
-//            }
-//        }
-//        
-//        //MARK: - 释放请求
-//        private func releaseRequestTasks() {
-//            let selCancel: Selector = Selector(kSelectorStruct.cancelRequest)
-//            if (viewModel != nil) && (viewModel?.responds(to: selCancel))!  {
-//                viewModel?.cancelRequest()
-//            }
-//        }
+        
+        // MARK: - 统一处理请求错误码
+        func manageErrorStatus(strStatus: String, strMsg: String) {
+            
+        }
+        
+        func manageFailStatus() {
+            
+        }
+        //
+        //        func logoutAndClearData() {
+        //            KSGlobal.shareInstance().clearLoginData()
+        //
+        //            let rootVC = self.navigationController?.viewControllers[0]
+        //            if rootVC is DYPLoginViewController {
+        //                _ = self.navigationController?.popToRootViewController(animated: true)
+        //                let loginVC: DYPLoginViewController = rootVC as! DYPLoginViewController
+        //                loginVC.logOutPopToRoot()
+        //            } else if rootVC is DYPTabBarController {
+        //                let loginVC: DYPLoginViewController = DYPLoginViewController()
+        //                let arrVCs: Array = [loginVC]
+        //                rootVC?.navigationController?.setViewControllers(arrVCs, animated: true)
+        //            }
+        //        }
+        //
+        //MARK: - 释放请求
+        func releaseRequestTasks() -> Void {
+            printLog(message: "releaseRequestTasks == \(String(describing: type(of: self)))")
+        }
         
         
     }

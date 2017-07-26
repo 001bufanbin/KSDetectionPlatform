@@ -188,7 +188,7 @@ class KSLoginView: UIView {
                                          width: kAppWidth-kAll_X-kTextFieldConst_W-kTextField_Hor_Spc-kTextField_H-kAll_X,
                                          height: kTextField_H)
         btnSecret.frame = CGRect(x: kAppWidth-kAll_X-kTextField_H,
-                                 y: viewLineUser.frame.maxY+kTextField_Ver_Line_Spc,
+                                 y: viewLineUser.frame.maxY+kTextFieldPwd_Ver_Spc,
                                  width: kTextField_H,
                                  height: kTextField_H)
         viewLinePwd.frame = CGRect(x: kAll_X,

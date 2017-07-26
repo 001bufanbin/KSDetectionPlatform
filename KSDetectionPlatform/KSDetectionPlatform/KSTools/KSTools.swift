@@ -81,6 +81,6 @@ func printLog<T>(message: T,
               line: Int = #line)
 {
     #if DEBUG
-        print("\((file as NSString).lastPathComponent) [\(fuc)] [Line \(line)] \(message)")
+        print("\((file as NSString).lastPathComponent) [\(fuc)] [Line \(line)]\r\n\(message)")
     #endif
 }
