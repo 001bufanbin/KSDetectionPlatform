@@ -1,0 +1,6 @@
+framework module Pods_KSDetectionPlatform {
+  umbrella header "Pods-KSDetectionPlatform-umbrella.h"
+
+  export *
+  module * { export * }
+}
