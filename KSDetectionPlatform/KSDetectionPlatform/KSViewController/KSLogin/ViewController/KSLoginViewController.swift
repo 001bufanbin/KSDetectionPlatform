@@ -43,7 +43,6 @@ class KSLoginViewController: KSBaseViewController {
         self.endEdit()
         let homeVC: KSHomeViewController = KSHomeViewController()
         self.navigationController?.pushViewController(homeVC, animated: true)
-        
     }
     
 }

@@ -8,16 +8,27 @@
     
     import UIKit
     
-    /// 导航栏有有按钮宽度
+    import MBProgressHUD
+    
+    /// 导航栏左右按钮宽度
     let kNavBtnLeftAndRight_W: CGFloat = 60.0
     /// 导航栏标题按钮宽度
     let kNavBtnTitle_W: CGFloat        = 80.0
+    
+    public enum KSHUDShowType {
+        case tost, load
+    }
+    
     
     class KSBaseViewController: UIViewController, UINavigationControllerDelegate {
         
         var btnTitle: UIButton!
         var btnLeft: UIButton!
         var btnRight: UIButton!
+        
+        var hudTost: MBProgressHUD?
+        var hudLoad: MBProgressHUD?
+        
         
         //MARK: - 初始化
         deinit{
@@ -123,15 +134,6 @@
             
         }
         
-        //MARK: - 页面点击取消编辑
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
-        }
-        
-        final func endEdit() -> Void {
-            self.view.endEditing(true)
-        }
-        
         // MARK: - UINavigationControllerDelegate
         func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
             if navigationController is KSNavigationViewController {
@@ -165,6 +167,63 @@
                 }
             }
         }
+        
+        //MARK: - 页面点击取消编辑
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
+        
+        final func endEdit() -> Void {
+            self.view.endEditing(true)
+        }
+        
+        // MARK: - 页面提示相关
+        final func showTost(_ hint: String, duration:TimeInterval = 1, completionBlock:@escaping () -> ()) -> Void {
+            if self.hudTost == nil {
+                self.initHudView(.tost)
+            }
+            self.hudTost?.label.text = hint
+            self.view.bringSubview(toFront: self.hudTost!)
+            self.hudTost?.show(animated: true)
+            self.hudTost?.hide(animated: true, afterDelay: duration)
+            self.hudTost?.completionBlock = {
+                completionBlock()
+            }
+        }
+        
+        final func showLoad(_ hint: String = "加载中...") -> Void {
+            if self.hudLoad == nil {
+                self.initHudView(.load)
+            }
+            self.hudLoad?.label.text = hint
+            self.view.bringSubview(toFront: self.hudLoad!)
+            self.hudLoad?.show(animated: true)
+        }
+        
+        final func hiddenLoad() -> Void {
+            self.hudLoad?.hide(animated: true)
+        }
+        
+        final func initHudView(_ type: KSHUDShowType) -> Void {
+            let hud: MBProgressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+            hud.animationType = .zoom
+            hud.bezelView.layer.cornerRadius = 5.0
+            hud.bezelView.color = RGBVACOLOR(0x000000, 0.75)
+            hud.contentColor = UIColor.white
+            hud.removeFromSuperViewOnHide = false
+            self.view.addSubview(hud)
+            switch type {
+            case .tost:
+                hud.mode = .text
+                hud.isUserInteractionEnabled = false
+                self.hudTost = hud
+            case .load:
+                hud.mode = .indeterminate
+                hud.isUserInteractionEnabled = true
+                self.hudLoad = hud
+            }
+        }
+        
         
         // MARK: - 统一处理请求错误码
         func manageErrorStatus(strStatus: String, strMsg: String) {
