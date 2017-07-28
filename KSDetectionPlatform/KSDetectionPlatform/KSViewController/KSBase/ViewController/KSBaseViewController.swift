@@ -182,12 +182,14 @@
             if self.hudTost == nil {
                 self.initHudView(.tost)
             }
-            self.hudTost?.label.text = hint
-            self.view.bringSubview(toFront: self.hudTost!)
-            self.hudTost?.show(animated: true)
-            self.hudTost?.hide(animated: true, afterDelay: duration)
-            self.hudTost?.completionBlock = {
-                completionBlock()
+            DispatchQueue.main.async {
+                self.hudTost?.label.text = hint
+                self.view.bringSubview(toFront: self.hudTost!)
+                self.hudTost?.show(animated: true)
+                self.hudTost?.hide(animated: true, afterDelay: duration)
+                self.hudTost?.completionBlock = {
+                    completionBlock()
+                }
             }
         }
         
@@ -195,13 +197,17 @@
             if self.hudLoad == nil {
                 self.initHudView(.load)
             }
-            self.hudLoad?.label.text = hint
-            self.view.bringSubview(toFront: self.hudLoad!)
-            self.hudLoad?.show(animated: true)
+            DispatchQueue.main.async {
+                self.hudLoad?.label.text = hint
+                self.view.bringSubview(toFront: self.hudLoad!)
+                self.hudLoad?.show(animated: true)
+            }
         }
         
         final func hiddenLoad() -> Void {
-            self.hudLoad?.hide(animated: true)
+            DispatchQueue.main.async {
+                self.hudLoad?.hide(animated: true)
+            }
         }
         
         final func initHudView(_ type: KSHUDShowType) -> Void {
