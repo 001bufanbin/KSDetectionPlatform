@@ -10,11 +10,15 @@ import Foundation
 import UIKit
 
 
+/// In Swift the situation is the same - there are no headers and no macros so there is also no precompiled header. Use extensions, global constants or singletons instead.
+
+
 // MARK: - SERVICE & SecurityPolicy
 let TestEnvironment   = true //测试环境
 let SanboxEnvironment = false//沙盒环境
 let OnlineEnvironment = false//正式环境
 
+var HOME_URL: String?
 #if TestEnvironment
     let HOME_URL = "http://192.168.0.140:8013"
 #elseif SanboxEnvironment

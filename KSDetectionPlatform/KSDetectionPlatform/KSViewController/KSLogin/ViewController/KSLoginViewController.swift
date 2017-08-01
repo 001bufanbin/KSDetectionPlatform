@@ -43,6 +43,7 @@ class KSLoginViewController: KSBaseViewController {
         self.endEdit()
         let homeVC: KSHomeViewController = KSHomeViewController()
         self.navigationController?.pushViewController(homeVC, animated: true)
+        printLog(message: HOME_URL)
     }
     
 }
