@@ -10,6 +10,7 @@ target 'KSDetectionPlatform' do
     pod 'SnapKit', '~> 3.2.0'
     pod 'Alamofire', '~> 4.4'
     pod 'SwiftyJSON', '~> 3.1.4'
+    pod 'HandyJSON', '~> 1.6.0'
 
   target 'KSDetectionPlatformTests' do
     inherit! :search_paths

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0C957C66B4B375724E2700834F106C6"
+               BlueprintIdentifier = "246D0D59DE7C16ADAEA7C9AA1F1DD63F"
                BuildableName = "Pods_KSDetectionPlatform.framework"
                BlueprintName = "Pods-KSDetectionPlatform"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0C957C66B4B375724E2700834F106C6"
+            BlueprintIdentifier = "246D0D59DE7C16ADAEA7C9AA1F1DD63F"
             BuildableName = "Pods_KSDetectionPlatform.framework"
             BlueprintName = "Pods-KSDetectionPlatform"
             ReferencedContainer = "container:Pods.xcodeproj">

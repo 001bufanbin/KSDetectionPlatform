@@ -140,7 +140,7 @@
                 if let coordinator = navigationController.topViewController?.transitionCoordinator {
                     if coordinator.initiallyInteractive {
                         coordinator.notifyWhenInteractionEnds({ (context) in
-                            if (coordinator.isCancelled == false) {
+                            if !coordinator.isCancelled {
                                 let fromVC = context.viewController(forKey: UITransitionContextViewControllerKey.from)
                                 if let baseVC: KSBaseViewController = fromVC as? KSBaseViewController {
                                     baseVC.releaseRequestTasks()

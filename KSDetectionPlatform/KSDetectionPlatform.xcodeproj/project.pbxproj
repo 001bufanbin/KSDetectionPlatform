@@ -28,6 +28,7 @@
 		172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */; };
 		172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */; };
 		172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23631F177DC200FF9090 /* KSConstMacros.swift */; };
+		1765DF5F1F31BD52005A457B /* KSServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765DF5E1F31BD52005A457B /* KSServiceManager.swift */; };
 		1777011F1F2873D100A9725B /* KSSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1777011E1F2873D100A9725B /* KSSettingViewController.swift */; };
 		207F79050776C0E529BAECDA /* Pods_KSDetectionPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C1EA0DD656AD4D8C49938A /* Pods_KSDetectionPlatformTests.framework */; };
 		7F2C8E5714732C270CCAAC32 /* Pods_KSDetectionPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584BEFD0775AEBD53BD0C605 /* Pods_KSDetectionPlatform.framework */; };
@@ -81,6 +82,7 @@
 		172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseViewController.swift; sourceTree = "<group>"; };
 		172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSNavigationViewController.swift; sourceTree = "<group>"; };
 		172B23631F177DC200FF9090 /* KSConstMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSConstMacros.swift; sourceTree = "<group>"; };
+		1765DF5E1F31BD52005A457B /* KSServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSServiceManager.swift; sourceTree = "<group>"; };
 		1777011E1F2873D100A9725B /* KSSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSettingViewController.swift; sourceTree = "<group>"; };
 		1C5516E89E795D552B281B59 /* Pods-KSDetectionPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDetectionPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSDetectionPlatform/Pods-KSDetectionPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 		584BEFD0775AEBD53BD0C605 /* Pods_KSDetectionPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSDetectionPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +265,7 @@
 		172B233D1F17773400FF9090 /* KSService */ = {
 			isa = PBXGroup;
 			children = (
+				1765DF5E1F31BD52005A457B /* KSServiceManager.swift */,
 			);
 			path = KSService;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				172A0F151F205DD80035AEE8 /* KSTools.swift in Sources */,
 				172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */,
 				172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */,
+				1765DF5F1F31BD52005A457B /* KSServiceManager.swift in Sources */,
 				172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */,
 				172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */,
 				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,
