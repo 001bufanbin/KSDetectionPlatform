@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import KSServiceManager
 
 class KSLoginViewController: KSBaseViewController {
 
@@ -41,9 +42,13 @@ class KSLoginViewController: KSBaseViewController {
     //
     func btnLoginDidClick(_ sender: UIButton) -> Void {
         self.endEdit()
+        printLog(message: HOME_URL)
+        let service:KSBaseService = KSBaseService()
+        service.getRequest(url: "https://httpbin.org/get")
+        
+        return
         let homeVC: KSHomeViewController = KSHomeViewController()
         self.navigationController?.pushViewController(homeVC, animated: true)
-        printLog(message: HOME_URL)
     }
     
 }
