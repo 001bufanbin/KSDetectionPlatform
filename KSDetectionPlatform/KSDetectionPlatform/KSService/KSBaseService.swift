@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 import Alamofire
+import SwiftyJSON
 
 class KSBaseService: NSObject {
 
@@ -20,24 +22,28 @@ class KSBaseService: NSObject {
     ///   - parameters: 请求字典
     /// - Returns: 请求Task
     @discardableResult
-    func getRequest(url: String, parameters:Dictionary<String, Any>? = nil) -> URLSessionDataTask {
+    func getRequest(url: String, parameters:Dictionary<String, Any>? = nil, success:@escaping (_ responseData:Any) -> ()) -> Request {
         let dataTask:Request = Alamofire.request(url,
                                                  method: .get,
                                                  parameters: parameters,
                                                  encoding: URLEncoding.default,
-                                                 headers: nil).responseString
+                                                 headers: nil).responseJSON
             {
                 (response) in
                 switch response.result {
                 case .success:
-                    print("Validation Successful")
                     print("responseJSON: \(response)")
                     print("responseJSON: \(response.result)")
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        success(json)
+                    }
+                    
                 case .failure(let error):
                     print(error)
                 }
         }
-        return dataTask.task as! URLSessionDataTask
+        return dataTask
     }
     
     

@@ -8,7 +8,7 @@ target 'KSDetectionPlatform' do
   # Pods for KSDetectionPlatform
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'SnapKit', '~> 3.2.0'
-    pod 'Alamofire', '~> 4.4'
+    pod 'Alamofire', '~> 4.4.0'
     pod 'SwiftyJSON', '~> 3.1.4'
     pod 'HandyJSON', '~> 1.6.0'
 

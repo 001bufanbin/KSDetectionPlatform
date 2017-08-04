@@ -6,7 +6,7 @@ PODS:
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
+  - Alamofire (~> 4.4.0)
   - HandyJSON (~> 1.6.0)
   - MBProgressHUD (~> 1.0.0)
   - SnapKit (~> 3.2.0)
@@ -19,6 +19,6 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: a91ac29ad68a3756fa8605cba40e25bd3e6be97f
+PODFILE CHECKSUM: 7461b5ed9b152aa0cf9232e84c6af618ce2f00d4
 
 COCOAPODS: 1.2.0

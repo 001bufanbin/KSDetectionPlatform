@@ -44,8 +44,9 @@ class KSLoginViewController: KSBaseViewController {
         self.endEdit()
         printLog(message: HOME_URL)
         let service:KSBaseService = KSBaseService()
-        service.getRequest(url: "https://httpbin.org/get")
-        
+        service.getRequest(url: "https://api.androidhive.info/contacts/") { (jsonData) in
+            printLog(message: jsonData)
+        }
         return
         let homeVC: KSHomeViewController = KSHomeViewController()
         self.navigationController?.pushViewController(homeVC, animated: true)
