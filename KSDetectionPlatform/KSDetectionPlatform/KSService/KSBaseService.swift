@@ -13,52 +13,70 @@ import SwiftyJSON
 
 class KSBaseService: NSObject {
 
-    typealias requestSuccessBlock = (dataTask:URLSessionDataTask, response:Any)
-    
+    var reqTask:Request!
+
+
     /// GET 请求
     ///
     /// - Parameters:
-    ///   - url: 请求地址
+    ///   - url: 请求URL
     ///   - parameters: 请求字典
-    /// - Returns: 请求Task
-    @discardableResult
-    func getRequest(url: String, parameters:Dictionary<String, Any>? = nil, success:@escaping (_ responseData:Any) -> ()) -> Request {
-        let dataTask:Request = Alamofire.request(url,
-                                                 method: .get,
-                                                 parameters: parameters,
-                                                 encoding: URLEncoding.default,
-                                                 headers: nil).responseJSON
-            {
-                (response) in
-                switch response.result {
-                case .success:
-                    print("responseJSON: \(response)")
-                    print("responseJSON: \(response.result)")
-                    if let value = response.result.value {
-                        let json = JSON(value)
-                        success(json)
-                    }
-                    
-                case .failure(let error):
-                    print(error)
-                }
+    ///   - success: 成功回调
+    ///   - failure: 失败回调
+    func getRequest(url: String,
+                    parameters:Dictionary<String, Any>? = nil,
+                    success:@escaping (_ request:Request, _ responseData:Any) -> (),
+                    failure:@escaping (_ request:Request) -> ()) {
+
+        reqTask = Alamofire.request(url,
+                                    method: .get,
+                                    parameters: parameters,
+                                    encoding: URLEncoding.default,
+                                    headers: nil).responseJSON { (response) in
+                                        switch response.result {
+                                        case .success:
+                                            if let value = response.result.value {
+                                                let json = JSON(value)
+                                                printLog("responseJSON == \(json)")
+                                                success(self.reqTask, json)
+                                            }
+                                        case .failure(let error):
+                                            printLog("errorRequest == \(error)")
+                                            failure(self.reqTask)
+                                        }
         }
-        return dataTask
     }
-    
-    
+
     /// POST 请求
     ///
     /// - Parameters:
-    ///   - url: 请求地址
+    ///   - url: 请求URL
     ///   - parameters: 请求字典
-    /// - Returns: 请求Task
-    @discardableResult
-    func postRequest(url: String, parameters:Dictionary<String, Any>) -> URLSessionDataTask {
-        let dataTask:Request = Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-            
+    ///   - success: 成功回调
+    ///   - failure: 失败回调
+    func postRequest(url: String,
+                     parameters:Dictionary<String, Any>? = nil,
+                     success:@escaping (_ request:Request, _ responseData:Any) -> (),
+                     failure:@escaping (_ request:Request) -> ()) {
+        reqTask = Alamofire.request(url,
+                                    method: .post,
+                                    parameters: parameters,
+                                    encoding: URLEncoding.default,
+                                    headers: nil).responseJSON { (response) in
+                                        switch response.result {
+                                        case .success:
+                                            if let value = response.result.value {
+                                                let json = JSON(value)
+                                                printLog("responseJSON == \(json)")
+                                                success(self.reqTask, json)
+                                            }
+                                        case .failure(let error):
+                                            printLog("errorRequest == \(error)")
+                                            failure(self.reqTask)
+                                        }
         }
-        return dataTask.task as! URLSessionDataTask
+        
     }
+
     
 }

@@ -63,6 +63,7 @@ class KSLoginView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = UIColor.white
         
         self.initHeadView()
         self.initContentView()
@@ -151,7 +152,7 @@ class KSLoginView: UIView {
     //MARK: 底部视图
     func initUnderView() -> Void {
         imgViewUnder = UIImageView(frame: CGRect.zero)
-        //imgViewUnder.image = LOADIMAGE("JZGOffice_Login_underLogo.png")
+        imgViewUnder.image = LOADPATHIMAGE("JZGOffice_Login_underLogo.png")
         self.addSubview(imgViewUnder)
     }
     

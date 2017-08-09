@@ -75,7 +75,7 @@ func KSBoldFont(_ fontSize: CGFloat) -> UIFont {
 /**
  *  NSLOG (WHEN DUBUG DOES NOT OUTPUT)
  */
-func printLog<T>(message: T,
+func printLog<T>(_ message: T,
               file: String = #file,
               fuc: String = #function,
               line: Int = #line)
