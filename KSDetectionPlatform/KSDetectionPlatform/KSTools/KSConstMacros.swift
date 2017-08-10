@@ -14,18 +14,9 @@ import UIKit
 
 
 // MARK: - SERVICE & SecurityPolicy
-let TestEnvironment   = true //测试环境
-let SanboxEnvironment = false//沙盒环境
-let OnlineEnvironment = false//正式环境
-
-var HOME_URL: String?
-#if TestEnvironment
-    let HOME_URL = "http://192.168.0.140:8013"
-#elseif SanboxEnvironment
-    let HOME_URL = "http://jiancetwo.sandbox.guchewang.com"
-#elseif OnlineEnvironment
-    let HOME_URL = "http://jctwo.guchewang.com"
-#endif
+let HOME_URL = "http://192.168.0.140:8013"
+//let HOME_URL = "http://jiancetwo.sandbox.guchewang.com"
+//let HOME_URL = "http://jctwo.guchewang.com"
 
 /// 超时时间
 let kTimeOut         = 15.0

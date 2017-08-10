@@ -42,14 +42,15 @@ class KSLoginViewController: KSBaseViewController {
     //
     func btnLoginDidClick(_ sender: UIButton) -> Void {
         self.endEdit()
-        printLog(HOME_URL)
-        let service:KSBaseService = KSBaseService()
-        service.getRequest(url: "https://api.androidhive.info/contacts/", success: { (request, jsonData) in
-            
-        }, failure: { (request)  in
-            
-        })
-        
+
+        let userService = KSUserService.shareInstance
+        userService.login(userName: "jzgxd", pwd: "111111", success: { (request, jsonData) in
+            printLog("responseJSON == \(jsonData)")
+        }) { (request, error) in
+            printLog("errorRequest == \(error)")
+        }
+
+
         return
         let homeVC: KSHomeViewController = KSHomeViewController()
         self.navigationController?.pushViewController(homeVC, animated: true)

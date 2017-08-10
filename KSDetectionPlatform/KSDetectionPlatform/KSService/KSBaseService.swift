@@ -11,10 +11,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+typealias successBlock = (_ request:Request?, _ responseData:Any) -> ()
+typealias failureBlock = (_ request:Request?, _ error:Error) -> ()
+
 class KSBaseService: NSObject {
 
-    var reqTask:Request!
-
+    var reqTask:Request?
 
     /// GET 请求
     ///
@@ -25,8 +27,8 @@ class KSBaseService: NSObject {
     ///   - failure: 失败回调
     func getRequest(url: String,
                     parameters:Dictionary<String, Any>? = nil,
-                    success:@escaping (_ request:Request, _ responseData:Any) -> (),
-                    failure:@escaping (_ request:Request) -> ()) {
+                    success:@escaping successBlock,
+                    failure:@escaping failureBlock) {
 
         reqTask = Alamofire.request(url,
                                     method: .get,
@@ -42,7 +44,7 @@ class KSBaseService: NSObject {
                                             }
                                         case .failure(let error):
                                             printLog("errorRequest == \(error)")
-                                            failure(self.reqTask)
+                                            failure(self.reqTask, error)
                                         }
         }
     }
@@ -56,8 +58,8 @@ class KSBaseService: NSObject {
     ///   - failure: 失败回调
     func postRequest(url: String,
                      parameters:Dictionary<String, Any>? = nil,
-                     success:@escaping (_ request:Request, _ responseData:Any) -> (),
-                     failure:@escaping (_ request:Request) -> ()) {
+                     success:@escaping successBlock,
+                     failure:@escaping failureBlock) {
         reqTask = Alamofire.request(url,
                                     method: .post,
                                     parameters: parameters,
@@ -72,11 +74,11 @@ class KSBaseService: NSObject {
                                             }
                                         case .failure(let error):
                                             printLog("errorRequest == \(error)")
-                                            failure(self.reqTask)
+                                            failure(self.reqTask, error)
                                         }
         }
-        
-    }
 
+    }
+    
     
 }

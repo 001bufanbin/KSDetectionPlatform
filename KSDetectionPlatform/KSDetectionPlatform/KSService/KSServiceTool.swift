@@ -13,7 +13,14 @@ class KSServiceTool: NSObject {
 
     class func sortDic(dicSort: Dictionary<String, Any>) -> Dictionary<String, Any> {
         var dicResult: Dictionary<String, Any> = [:]
-        dicResult["ss"] = "aa"
+        guard dicSort.isEmpty else {
+            return dicResult
+        }
+        dicResult = dicSort
+        dicResult["tokenid"]     = kToken
+        dicResult["platType"]    = kPlantType
+        dicResult["equipmentNo"] = kDeviceUUID
+        
         return dicResult
     }
 
