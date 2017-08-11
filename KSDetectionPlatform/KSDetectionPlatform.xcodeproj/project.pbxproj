@@ -29,6 +29,7 @@
 		172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */; };
 		172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */; };
 		172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23631F177DC200FF9090 /* KSConstMacros.swift */; };
+		1733A25A1F3D5C0B000267C3 /* KSServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733A2591F3D5C0B000267C3 /* KSServiceProtocol.swift */; };
 		1736A3BC1F32CD0A0012F26E /* KSBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736A3BB1F32CD0A0012F26E /* KSBaseService.swift */; };
 		17671DEA1F3B19E2009A70D4 /* KSServiceTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17671DE91F3B19E2009A70D4 /* KSServiceTool.swift */; };
 		1777011F1F2873D100A9725B /* KSSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1777011E1F2873D100A9725B /* KSSettingViewController.swift */; };
@@ -85,6 +86,7 @@
 		172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseViewController.swift; sourceTree = "<group>"; };
 		172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSNavigationViewController.swift; sourceTree = "<group>"; };
 		172B23631F177DC200FF9090 /* KSConstMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSConstMacros.swift; sourceTree = "<group>"; };
+		1733A2591F3D5C0B000267C3 /* KSServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSServiceProtocol.swift; sourceTree = "<group>"; };
 		1736A3BB1F32CD0A0012F26E /* KSBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseService.swift; sourceTree = "<group>"; };
 		17671DE91F3B19E2009A70D4 /* KSServiceTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSServiceTool.swift; sourceTree = "<group>"; };
 		1777011E1F2873D100A9725B /* KSSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSettingViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				1728E2D91F3C3C2000A98288 /* KSUserService */,
 				1736A3BB1F32CD0A0012F26E /* KSBaseService.swift */,
+				1733A2591F3D5C0B000267C3 /* KSServiceProtocol.swift */,
 				17671DE91F3B19E2009A70D4 /* KSServiceTool.swift */,
 			);
 			path = KSService;
@@ -694,6 +697,7 @@
 			files = (
 				172A0F151F205DD80035AEE8 /* KSTools.swift in Sources */,
 				17671DEA1F3B19E2009A70D4 /* KSServiceTool.swift in Sources */,
+				1733A25A1F3D5C0B000267C3 /* KSServiceProtocol.swift in Sources */,
 				172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */,
 				172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */,
 				1728E2DB1F3C3C4000A98288 /* KSUserService.swift in Sources */,

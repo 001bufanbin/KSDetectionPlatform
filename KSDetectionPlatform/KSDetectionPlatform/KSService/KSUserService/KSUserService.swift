@@ -12,24 +12,19 @@ final class KSUserService: KSBaseService {
     static let shareInstance = KSUserService()
     private override init() { super.init() }
 
+
     func login(userName:String,
                pwd:String,
-               success:successBlock,
-               failure:failureBlock) -> Void {
+               success:@escaping successBlock,
+               failure:@escaping failureBlock) -> Void {
         let parameter:Dictionary<String, Any> = ["lgcode":userName, "pwd":pwd, "op":"login"]
         let url = HOME_URL+"/App/UserHandler.ashx"
-        let  service = KSBaseService()
-        service.postRequest(url: url, parameters: parameter, success: { (request, jsonData) in
-            printLog("responseJSON == \(jsonData)")
+        let  service = KSUserService.shareInstance
+        request = service.postRequest(url: url, parameters: parameter, success: { (request, json) in
+            success(request, json)
         }, failure: { (request, error) in
-            printLog("errorRequest == \(error)")
+            failure(request, error)
         })
-
-//        service.postRequest(url: "", success: { (request, jsonData) in
-//
-//        }) { (request, error) in
-//
-//        }
 
     }
 }

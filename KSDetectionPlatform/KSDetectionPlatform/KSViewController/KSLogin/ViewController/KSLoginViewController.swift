@@ -44,11 +44,11 @@ class KSLoginViewController: KSBaseViewController {
         self.endEdit()
 
         let userService = KSUserService.shareInstance
-        userService.login(userName: "jzgxd", pwd: "111111", success: { (request, jsonData) in
-            printLog("responseJSON == \(jsonData)")
-        }) { (request, error) in
-            printLog("errorRequest == \(error)")
-        }
+        userService.login(userName: "jzgxd", pwd: "666666", success: { (request, json) in
+
+        }, failure: { (request, error) in
+            
+        })
 
 
         return

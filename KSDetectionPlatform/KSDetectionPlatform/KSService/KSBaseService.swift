@@ -11,13 +11,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-typealias successBlock = (_ request:Request?, _ responseData:Any) -> ()
-typealias failureBlock = (_ request:Request?, _ error:Error) -> ()
+typealias successBlock = (_ request:Request?, _ responseData:Any) -> Void
+typealias failureBlock = (_ request:Request?, _ error:Error) -> Void
 
-class KSBaseService: NSObject {
+protocol KSServiceProtocol {
+    //var reqTask:Request? { get set }
+}
 
-    var reqTask:Request?
-
+extension KSServiceProtocol {
     /// GET 请求
     ///
     /// - Parameters:
@@ -28,9 +29,10 @@ class KSBaseService: NSObject {
     func getRequest(url: String,
                     parameters:Dictionary<String, Any>? = nil,
                     success:@escaping successBlock,
-                    failure:@escaping failureBlock) {
+                    failure:@escaping failureBlock) -> Request? {
 
-        reqTask = Alamofire.request(url,
+        var request:Request?
+        request = Alamofire.request(url,
                                     method: .get,
                                     parameters: parameters,
                                     encoding: URLEncoding.default,
@@ -40,13 +42,15 @@ class KSBaseService: NSObject {
                                             if let value = response.result.value {
                                                 let json = JSON(value)
                                                 printLog("responseJSON == \(json)")
-                                                success(self.reqTask, json)
+                                                success(request, json)
+
                                             }
                                         case .failure(let error):
                                             printLog("errorRequest == \(error)")
-                                            failure(self.reqTask, error)
+                                            failure(request, error)
                                         }
         }
+        return request;
     }
 
     /// POST 请求
@@ -59,8 +63,9 @@ class KSBaseService: NSObject {
     func postRequest(url: String,
                      parameters:Dictionary<String, Any>? = nil,
                      success:@escaping successBlock,
-                     failure:@escaping failureBlock) {
-        reqTask = Alamofire.request(url,
+                     failure:@escaping failureBlock) -> Request? {
+        var request:Request?
+        request = Alamofire.request(url,
                                     method: .post,
                                     parameters: parameters,
                                     encoding: URLEncoding.default,
@@ -70,15 +75,26 @@ class KSBaseService: NSObject {
                                             if let value = response.result.value {
                                                 let json = JSON(value)
                                                 printLog("responseJSON == \(json)")
-                                                success(self.reqTask, json)
+                                                success(request, json)
                                             }
                                         case .failure(let error):
                                             printLog("errorRequest == \(error)")
-                                            failure(self.reqTask, error)
+                                            failure(request, error)
                                         }
         }
-
+        return request;
     }
+
+
+}
+
+class KSBaseService: NSObject,KSServiceProtocol {
+    
+    var request:Request?
+    
+    
+    
+    
     
     
 }
