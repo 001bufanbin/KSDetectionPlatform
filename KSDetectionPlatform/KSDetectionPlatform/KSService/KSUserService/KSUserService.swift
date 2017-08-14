@@ -8,23 +8,18 @@
 
 import UIKit
 
-final class KSUserService: KSBaseService {
-    static let shareInstance = KSUserService()
-    private override init() { super.init() }
+// MARK: - 登录接口
+struct KSLoginService: KSBaseService {
+    
+    var userName: String
+    var pwd: String
 
+    let path:String = "/App/UserHandler.ashx"
 
-    func login(userName:String,
-               pwd:String,
-               success:@escaping successBlock,
-               failure:@escaping failureBlock) -> Void {
-        let parameter:Dictionary<String, Any> = ["lgcode":userName, "pwd":pwd, "op":"login"]
-        let url = HOME_URL+"/App/UserHandler.ashx"
-        let  service = KSUserService.shareInstance
-        request = service.postRequest(url: url, parameters: parameter, success: { (request, json) in
-            success(request, json)
-        }, failure: { (request, error) in
-            failure(request, error)
-        })
-
+    var parameter: Dictionary<String, Any> {
+        return ["lgcode":userName, "pwd":pwd, "op":"login"]
     }
+    //var response: Any
 }
+
+

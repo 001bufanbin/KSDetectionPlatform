@@ -43,12 +43,18 @@ class KSLoginViewController: KSBaseViewController {
     func btnLoginDidClick(_ sender: UIButton) -> Void {
         self.endEdit()
 
-        let userService = KSUserService.shareInstance
-        userService.login(userName: "jzgxd", pwd: "666666", success: { (request, json) in
+//        KSUserService.shareInstance.login(userName: "jzgxd", pwd: "666666", success: { (request, json) in
+//
+//        }, failure: { (request, error) in
+//            
+//        })
 
-        }, failure: { (request, error) in
-            
-        })
+        KSUserViewModel.share.login(userName: "jzgxd", pwd: "666666", success: { (request, json) in
+            printLog("request == \(String(describing: request))")
+            printLog("responseJSON == \(json)")
+        }) { (request, error) in
+
+        }
 
 
         return
