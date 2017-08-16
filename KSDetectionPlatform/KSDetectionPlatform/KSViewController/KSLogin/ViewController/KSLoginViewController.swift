@@ -49,9 +49,10 @@ class KSLoginViewController: KSBaseViewController {
 //            
 //        })
 
-        KSUserViewModel.share.login(userName: "jzgxd", pwd: "666666", success: { (request, json) in
+        KSUserViewModel.share.login(userName: "jzgxd", pwd: "666666", success: { (request, model) in
             printLog("request == \(String(describing: request))")
-            printLog("responseJSON == \(json)")
+            printLog("model == \(String(describing: model))")
+            printLog("model == \(String(describing: model.nickName))")
         }) { (request, error) in
 
         }

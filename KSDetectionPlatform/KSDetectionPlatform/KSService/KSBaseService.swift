@@ -1,8 +1,8 @@
 //
-//  KSService.swift
+//  KSBaseService.swift
 //  KSDetectionPlatform
 //
-//  Created by bufb on 2017/8/14.
+//  Created by bufb on 2017/8/15.
 //  Copyright © 2017年 kris. All rights reserved.
 //
 
@@ -31,8 +31,8 @@ protocol KSBaseService {
     var method:KSHttpMethod { get }
 
     var parameter: Dictionary<String, Any>  { get }
-    
-    //var response: Any { get }
+
+    associatedtype ResponseModel
 
 }
 
@@ -49,5 +49,5 @@ extension KSBaseService {
     var method:KSHttpMethod {
         return .post
     }
-
+    
 }

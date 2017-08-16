@@ -27,17 +27,19 @@ class KSUserViewModel: KSBaseViewModel {
     ///   - failure: 失败回调
     func login(userName:String,
                pwd:String,
-               success:@escaping successBlock,
-               failure:@escaping failureBlock) -> Void {
-        let loginService = KSLoginService(userName: userName, pwd: pwd)
-        self.loadRequest(service: loginService, success: { (request, json) in
-            success(request, json)
+               success:@escaping successModelBlock<KSLoginService.ResponseModel>,
+               failure:@escaping failureModelBlock) -> Void {
+        self.loadRequest(service: KSLoginService(userName: userName, pwd: pwd), success: { (request, json) in
+            if let dic:NSDictionary = json as? NSDictionary,
+                let userModel = KSUserModel.deserialize(from: dic) {
+                success(request, userModel)
+            }
         }, failure: { (request, error) in
             failure(request, error)
         })
     }
-
-
     
-
+    
+    
+    
 }

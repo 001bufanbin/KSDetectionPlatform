@@ -10,16 +10,17 @@ import UIKit
 
 // MARK: - 登录接口
 struct KSLoginService: KSBaseService {
-    
+
     var userName: String
     var pwd: String
 
     let path:String = "/App/UserHandler.ashx"
+    //let method: KSHttpMethod = .get
 
     var parameter: Dictionary<String, Any> {
         return ["lgcode":userName, "pwd":pwd, "op":"login"]
     }
-    //var response: Any
+    typealias ResponseModel = KSUserModel
 }
 
 

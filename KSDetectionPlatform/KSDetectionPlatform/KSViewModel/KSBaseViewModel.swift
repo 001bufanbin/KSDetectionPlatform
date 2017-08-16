@@ -11,8 +11,13 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-typealias successBlock = (_ request:Request?, _ responseData:Any) -> Void
+/// 请求回调-参数为json（Any）
+typealias successBlock = (_ request:Request?, _ responseData:Any?) -> Void
 typealias failureBlock = (_ request:Request?, _ error:Error) -> Void
+
+///请求回调-参数为model(子类使用，子类对应的model实体)
+typealias successModelBlock<T> = (_ request:Request?, _ responseData:T) -> Void
+typealias failureModelBlock = (_ request:Request?, _ error:Error) -> Void
 
 class KSBaseViewModel: NSObject, KSServiceProtocol {
 
@@ -25,7 +30,7 @@ class KSBaseViewModel: NSObject, KSServiceProtocol {
     ///   - service: 请求SERVICE
     ///   - success: 请求成功回调
     ///   - failure: 请求失败回调
-    func loadRequest(service: KSBaseService,
+    func loadRequest<T: KSBaseService>(service: T,
                      success:@escaping successBlock,
                      failure:@escaping failureBlock) {
 
@@ -67,7 +72,6 @@ extension KSServiceProtocol {
     ///   - parameters: 请求字典
     ///   - success: 成功回调
     ///   - failure: 失败回调
-    @discardableResult
     func getRequest(url: String,
                     parameters:Dictionary<String, Any>? = nil,
                     success:@escaping successBlock,
@@ -82,9 +86,9 @@ extension KSServiceProtocol {
                                         switch response.result {
                                         case .success:
                                             if let value = response.result.value {
-                                                let json = JSON(value)
-                                                printLog("responseJSON == \(json)")
-                                                success(request, json)
+                                                //let json = JSON(value)
+                                                printLog("responseJSON == \(value)")
+                                                success(request, value)
 
                                             }
                                         case .failure(let error):
@@ -102,7 +106,6 @@ extension KSServiceProtocol {
     ///   - parameters: 请求字典
     ///   - success: 成功回调
     ///   - failure: 失败回调
-    @discardableResult
     func postRequest(url: String,
                      parameters:Dictionary<String, Any>? = nil,
                      success:@escaping successBlock,
@@ -116,9 +119,9 @@ extension KSServiceProtocol {
                                         switch response.result {
                                         case .success:
                                             if let value = response.result.value {
-                                                let json = JSON(value)
-                                                printLog("responseJSON == \(json)")
-                                                success(request, json)
+                                                //let json = JSON(value)
+                                                printLog("responseJSON == \(value)")
+                                                success(request, value)
                                             }
                                         case .failure(let error):
                                             let errorCode = (error as NSError).code
