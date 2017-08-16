@@ -18,10 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let loginVC:KSLoginViewController = KSLoginViewController();
-        let navController:KSNavigationViewController = KSNavigationViewController(rootViewController: loginVC)
-        
+
+        var mainVC: KSBaseViewController
+        var navController: KSNavigationViewController
+        if !KSGlobal.share.isLogin() {
+            mainVC = KSLoginViewController(navStyle: .hidden)
+            navController = KSNavigationViewController(rootViewController: mainVC)
+        } else {
+            mainVC = KSHomeViewController(navStyle: .hidden)
+            navController = KSNavigationViewController(rootViewController: mainVC)
+        }
+
+//        let loginVC:KSLoginViewController = KSLoginViewController();
+//        let navController:KSNavigationViewController = KSNavigationViewController(rootViewController: loginVC)
+
         self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()
         

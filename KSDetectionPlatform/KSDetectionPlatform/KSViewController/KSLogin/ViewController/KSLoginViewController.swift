@@ -22,11 +22,6 @@ class KSLoginViewController: KSBaseViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
     override func setNavTitleAndBtn() {
         self.setGoBackBtn(strTitle: "", hidden: true, imgNor: "backButton.png", imgSel: "backButton.png")
         self.setTitleBtn(strTitle: "登录", enable: false, imgNor: "", imgSel: "")
@@ -42,25 +37,12 @@ class KSLoginViewController: KSBaseViewController {
     //
     func btnLoginDidClick(_ sender: UIButton) -> Void {
         self.endEdit()
-
-//        KSUserService.shareInstance.login(userName: "jzgxd", pwd: "666666", success: { (request, json) in
-//
-//        }, failure: { (request, error) in
-//            
-//        })
-
         KSUserViewModel.share.login(userName: "jzgxd", pwd: "666666", success: { (request, model) in
-            printLog("request == \(String(describing: request))")
-            printLog("model == \(String(describing: model))")
-            printLog("model == \(String(describing: model.nickName))")
+            let homeVC: KSHomeViewController = KSHomeViewController(navStyle: .hidden)
+            self.navigationController?.pushViewController(homeVC, animated: true)
         }) { (request, error) in
-
+            self.manageFailStatus()
         }
-
-
-        return
-        let homeVC: KSHomeViewController = KSHomeViewController()
-        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
 }

@@ -19,6 +19,10 @@
         case tost, load
     }
 
+    public enum KSNavStyle {
+        case show, hidden
+    }
+
 
     class KSBaseViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -28,6 +32,8 @@
 
         var hudTost: MBProgressHUD?
         var hudLoad: MBProgressHUD?
+
+        var navStyle: KSNavStyle?
 
 
         //MARK: - 初始化
@@ -40,17 +46,37 @@
             // Dispose of any resources that can be recreated.
         }
 
+        convenience init() {
+            self.init(navStyle: .show)
+        }
+
+        init(navStyle: KSNavStyle?) {
+            self.navStyle = navStyle
+            super.init(nibName: nil, bundle: nil)
+        }
+
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+
         override func viewDidLoad() {
             super.viewDidLoad()
 
             self.view.backgroundColor = RGBVCOLOR(0xf8f8f8)
-            self.initNavigationBar()
-            self.setNavTitleAndBtn()
+
+            if self.navStyle == .show {
+                self.initNavigationBar()
+                self.setNavTitleAndBtn()
+            }
         }
 
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
-            self.navigationController?.setNavigationBarHidden(false, animated: false)
+            if self.navStyle == .show {
+                self.navigationController?.setNavigationBarHidden(false, animated: false)
+            } else {
+                self.navigationController?.setNavigationBarHidden(true, animated: false)
+            }
             self.navigationController?.delegate = self;
         }
 
@@ -231,13 +257,14 @@
         }
 
 
-        // MARK: - 统一处理请求错误码
-        func manageErrorStatus(strStatus: String, strMsg: String) {
+        // MARK: - 统一处理请求错误码+请求失败
+        func manageErrorStatus(_ : String, msg: String) {
 
         }
 
         func manageFailStatus() {
-
+            self.hiddenLoad()
+            self.showTost("网络不给力，请稍后再试") {}
         }
         //
         //        func logoutAndClearData() {
@@ -257,7 +284,7 @@
         //
         //MARK: - 释放请求
         func releaseRequestTasks() -> Void {
-            printLog("releaseRequestTasks == \(String(describing: type(of: self)))")
+            //printLog("releaseRequestTasks == \(String(describing: type(of: self)))")
         }
         
         

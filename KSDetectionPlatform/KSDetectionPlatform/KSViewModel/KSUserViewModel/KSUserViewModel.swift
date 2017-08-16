@@ -32,6 +32,8 @@ class KSUserViewModel: KSBaseViewModel {
         self.loadRequest(service: KSLoginService(userName: userName, pwd: pwd), success: { (request, json) in
             if let dic:NSDictionary = json as? NSDictionary,
                 let userModel = KSUserModel.deserialize(from: dic) {
+                //登录成功保存本地
+                KSGlobal.share.userModel = userModel
                 success(request, userModel)
             }
         }, failure: { (request, error) in

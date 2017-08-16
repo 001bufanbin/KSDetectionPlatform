@@ -87,6 +87,7 @@ extension KSServiceProtocol {
                                         case .success:
                                             if let value = response.result.value {
                                                 //let json = JSON(value)
+                                                printLog("request == \(String(describing: request?.request)))")
                                                 printLog("responseJSON == \(value)")
                                                 success(request, value)
 
@@ -120,6 +121,7 @@ extension KSServiceProtocol {
                                         case .success:
                                             if let value = response.result.value {
                                                 //let json = JSON(value)
+                                                printLog("request == \(String(describing: request?.request)))")
                                                 printLog("responseJSON == \(value)")
                                                 success(request, value)
                                             }
