@@ -17,7 +17,8 @@ class KSHomeViewController: KSBaseViewController {
         self.initContainsView()
 
     }
-    
+
+    // MARK: - init contains view
     func initContainsView() -> Void {
         self.initNavView()
 
@@ -35,6 +36,7 @@ class KSHomeViewController: KSBaseViewController {
         self.view.addSubview(navView)
     }
 
+    // MARK: - left and right btn handler
     override func goBackBtnClickHandler(_ sender: UIButton) {
         let settingVC = KSSettingViewController()
         self.navigationController?.pushViewController(settingVC, animated: true)
