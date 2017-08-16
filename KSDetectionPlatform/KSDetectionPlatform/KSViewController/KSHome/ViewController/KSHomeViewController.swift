@@ -17,25 +17,32 @@ class KSHomeViewController: KSBaseViewController {
         self.initContainsView()
 
     }
-
-    override func setNavTitleAndBtn() {
-        self.setGoBackBtn(strTitle: "", hidden: true, imgNor: "backButton.png", imgSel: "backButton.png")
-        self.setTitleBtn(strTitle: "主页", enable: false, imgNor: "", imgSel: "")
-        self.setRightBtn(strTitle: "", hidden: true, imgNor: "", imgSel: "")
-    }
     
     func initContainsView() -> Void {
-        let rectBtn = CGRect(x: 40, y: 80, width: 40, height: 40)
-        let btn: UIButton = UIButton(frame: rectBtn)
-        btn.backgroundColor = UIColor.red
-        btn.setTitle("设置", for: .normal)
-        btn.addTarget(self, action: #selector(btnToSetting(_:)), for: .touchUpInside)
-        self.view.addSubview(btn)
+        self.initNavView()
+
     }
-    
-    func btnToSetting(_ btn: UIButton) -> Void {
+
+    private func initNavView() -> Void {
+        let rect = CGRect(x: 0, y: 0, width: kAppWidth, height: kStatusBarHeight+kNavBarHeight)
+        let navView:KSNavCustomView = KSNavCustomView(frame: rect)
+        navView.setGoBackBtn(strTitle: "", hidden: false, imgNor: "JZGOffice_Home_BtnSet.png", imgSel: "ZGOffice_Home_BtnSet.png")
+        navView.setTitleBtn(strTitle: "", enable: true, imgNor: "", imgSel: "")
+        navView.setRightBtn(strTitle: "", hidden: false, imgNor: "JZGOffice_Home_BtnMsg.png", imgSel: "JZGOffice_Home_BtnMsg.png")
+        navView.btnLeft.addTarget(self, action: #selector(goBackBtnClickHandler(_:)), for: .touchUpInside)
+        navView.btnTitle.addTarget(self, action: #selector(titleBtnClickedHandeler(_:)), for: .touchUpInside)
+        navView.btnRight.addTarget(self, action: #selector(rightBtnClickedHandeler(_:)), for: .touchUpInside)
+        self.view.addSubview(navView)
+    }
+
+    override func goBackBtnClickHandler(_ sender: UIButton) {
         let settingVC = KSSettingViewController()
         self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+
+    override func rightBtnClickedHandeler(_ sender: UIButton) {
+        let msgCenterVC = KSMsgCenterViewController()
+        self.navigationController?.pushViewController(msgCenterVC, animated: true)
     }
     
 }
