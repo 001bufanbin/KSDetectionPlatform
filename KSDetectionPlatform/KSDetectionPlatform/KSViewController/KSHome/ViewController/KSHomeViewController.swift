@@ -9,7 +9,7 @@
 import UIKit
 
 class KSHomeViewController: KSBaseViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.green
@@ -24,7 +24,7 @@ class KSHomeViewController: KSBaseViewController {
     }
 
     // MARK: - init contains view
-    func initContainsView() -> Void {
+    private func initContainsView() -> Void {
         self.initNavView()
         self.initBtnRefresh()
         self.initBtnPicSample()
@@ -43,28 +43,28 @@ class KSHomeViewController: KSBaseViewController {
     }
 
 
-    func initBtnRefresh() -> Void {
+    private func initBtnRefresh() -> Void {
         let rect = CGRect(x: 100, y: 100, width: 200, height: 40)
         let btnRefresh = UIButton(type: .system)
         btnRefresh.frame = rect;
         btnRefresh.backgroundColor = UIColor.red
-        btnRefresh.setTitle("ReloadHomeInfo", for: .normal)
+        btnRefresh.setTitle("获取主页信息", for: .normal)
         btnRefresh.addTarget(self, action: #selector(btnRefreshClicked(btn:)), for: .touchUpInside)
         self.view.addSubview(btnRefresh)
     }
 
-    func initBtnPicSample() -> Void {
+    private func initBtnPicSample() -> Void {
         let rect = CGRect(x: 100, y: 200, width: 200, height: 40)
         let btnPicSample = UIButton(type: .system)
         btnPicSample.frame = rect;
         btnPicSample.backgroundColor = UIColor.red
-        btnPicSample.setTitle("ReloadPicSample", for: .normal)
+        btnPicSample.setTitle("获取拍摄样例", for: .normal)
         btnPicSample.addTarget(self, action: #selector(btnLoadPicSampleClicked(btn:)), for: .touchUpInside)
         self.view.addSubview(btnPicSample)
     }
 
     // MARK: - load Request
-    func loadHomeInfoRequest() -> Void {
+    private func loadHomeInfoRequest() -> Void {
         KSHomeViewModel.share.loadHomeInfo(success: { (request, model) in
             self.hiddenLoad()
             printLog(model.TaskCount)
@@ -76,7 +76,7 @@ class KSHomeViewController: KSBaseViewController {
         }
     }
 
-    func loadPicSample() -> Void {
+    private func loadPicSample() -> Void {
         KSHomeViewModel.share.loadHomePicSample(success: { (request, model) in
             self.hiddenLoad()
             printLog(model.KSList)
