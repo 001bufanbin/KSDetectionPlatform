@@ -49,5 +49,9 @@ extension KSBaseService {
     var method:KSHttpMethod {
         return .post
     }
-    
+
+    var parameter:Dictionary<String, Any> {
+        return [:]
+    }
+
 }

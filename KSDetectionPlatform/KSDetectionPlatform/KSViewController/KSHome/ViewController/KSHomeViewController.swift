@@ -12,16 +12,22 @@ class KSHomeViewController: KSBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.green
 
         // Do any additional setup after loading the view.
         self.initContainsView()
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadHomeInfoRequest()
     }
 
     // MARK: - init contains view
     func initContainsView() -> Void {
         self.initNavView()
-
+        self.initBtnRefresh()
+        self.initBtnPicSample()
     }
 
     private func initNavView() -> Void {
@@ -36,7 +42,65 @@ class KSHomeViewController: KSBaseViewController {
         self.view.addSubview(navView)
     }
 
-    // MARK: - left and right btn handler
+
+    func initBtnRefresh() -> Void {
+        let rect = CGRect(x: 100, y: 100, width: 200, height: 40)
+        let btnRefresh = UIButton(type: .system)
+        btnRefresh.frame = rect;
+        btnRefresh.backgroundColor = UIColor.red
+        btnRefresh.setTitle("ReloadHomeInfo", for: .normal)
+        btnRefresh.addTarget(self, action: #selector(btnRefreshClicked(btn:)), for: .touchUpInside)
+        self.view.addSubview(btnRefresh)
+    }
+
+    func initBtnPicSample() -> Void {
+        let rect = CGRect(x: 100, y: 200, width: 200, height: 40)
+        let btnPicSample = UIButton(type: .system)
+        btnPicSample.frame = rect;
+        btnPicSample.backgroundColor = UIColor.red
+        btnPicSample.setTitle("ReloadPicSample", for: .normal)
+        btnPicSample.addTarget(self, action: #selector(btnLoadPicSampleClicked(btn:)), for: .touchUpInside)
+        self.view.addSubview(btnPicSample)
+    }
+
+    // MARK: - load Request
+    func loadHomeInfoRequest() -> Void {
+        KSHomeViewModel.share.loadHomeInfo(success: { (request, model) in
+            self.hiddenLoad()
+            printLog(model.TaskCount)
+            printLog(model.Banner)
+            printLog(model.Statistic)
+        }) { (request, error) in
+            self.hiddenLoad()
+            self.manageFailStatus()
+        }
+    }
+
+    func loadPicSample() -> Void {
+        KSHomeViewModel.share.loadHomePicSample(success: { (request, model) in
+            self.hiddenLoad()
+            printLog(model.KSList)
+            printLog(model.KSList?.first?.ID)
+            printLog(model.KSList?.first?.Description)
+            printLog(model.KSList?.first?.Title)
+            printLog(model.KSList?.first?.PictureUrl)
+        }) { (request, error) in
+            self.hiddenLoad()
+            self.manageFailStatus()
+        }
+    }
+
+    // MARK: - btn handler
+    func btnRefreshClicked(btn: UIButton) -> Void {
+        self.showLoad()
+        self.loadHomeInfoRequest()
+    }
+
+    func btnLoadPicSampleClicked(btn: UIButton) -> Void {
+        self.showLoad()
+        self.loadPicSample()
+    }
+
     override func goBackBtnClickHandler(_ sender: UIButton) {
         let settingVC = KSSettingViewController()
         self.navigationController?.pushViewController(settingVC, animated: true)

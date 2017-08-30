@@ -273,6 +273,7 @@ class KSBaseViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     func manageFailStatus() {
+        printLog("请求失败！！！")
         self.hiddenLoad()
         self.showTost("网络不给力，请稍后再试") {}
     }

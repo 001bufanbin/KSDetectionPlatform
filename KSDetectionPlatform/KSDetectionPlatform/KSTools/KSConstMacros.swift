@@ -15,8 +15,6 @@ import UIKit
 
 // MARK: - SERVICE & SecurityPolicy
 let HOME_URL = "http://192.168.0.140:8013"
-//let HOME_URL = "http://jiancetwo.sandbox.guchewang.com"
-//let HOME_URL = "http://jctwo.guchewang.com"
 
 /// 超时时间
 let kTimeOut         = 15.0
@@ -93,5 +91,13 @@ let CUTTING_LINE_COLOR = RGBVCOLOR(0xEEEEEE)
 let CUTTING_LINE_HEIGHT: CGFloat = UIScreen.main.scale == 2 ? 0.5 : 0.34
 
 
-
+// MARK: - 订单类型
+enum JZGOrderType: Int {
+    case JZGOrderTypeAll            = 100 //线上+线下订单
+    case JZGOrderTypeOnLine         = 4   //快速估值订单（6张、9张、18张订单）
+    case JZGOrderTypeOnLineEighteen = 1   //18张订单
+    case JZGOrderTypeOnLineSix      = 2   //6张订单
+    case JZGOrderTypeOnLineNine     = 5   //9张订单
+    case JZGOrderTypeOffLine        = 3   //检测估值订单（线下订单）
+}
 

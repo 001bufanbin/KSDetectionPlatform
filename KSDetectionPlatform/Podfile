@@ -11,6 +11,7 @@ target 'KSDetectionPlatform' do
     pod 'Alamofire', '~> 4.4.0'
     pod 'SwiftyJSON', '~> 3.1.4'
     pod 'HandyJSON', '~> 1.6.0'
+    pod 'SDCycleScrollView','1.64'
 
   target 'KSDetectionPlatformTests' do
     inherit! :search_paths

@@ -28,6 +28,9 @@
 		172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */; };
 		172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */; };
 		172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B23631F177DC200FF9090 /* KSConstMacros.swift */; };
+		17374E451F556ABA00E5EDC6 /* KSHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374E441F556ABA00E5EDC6 /* KSHomeService.swift */; };
+		17374E481F556B0F00E5EDC6 /* KSHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374E471F556B0F00E5EDC6 /* KSHomeModel.swift */; };
+		17374E4B1F556DC800E5EDC6 /* KSHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374E4A1F556DC800E5EDC6 /* KSHomeViewModel.swift */; };
 		174157A51F4428AF002DEAF8 /* KSUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174157A41F4428AF002DEAF8 /* KSUserModel.swift */; };
 		174157A71F442D46002DEAF8 /* KSGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174157A61F442D46002DEAF8 /* KSGlobal.swift */; };
 		174157C51F444315002DEAF8 /* JZGOffice_Home_BannerDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 174157A91F444315002DEAF8 /* JZGOffice_Home_BannerDefault.png */; };
@@ -68,6 +71,7 @@
 		17770DC11F414DC0000231F0 /* KSBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17770DC01F414DC0000231F0 /* KSBaseViewModel.swift */; };
 		17770DC41F414E3C000231F0 /* KSUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17770DC31F414E3C000231F0 /* KSUserViewModel.swift */; };
 		17770DC81F41B145000231F0 /* KSUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17770DC71F41B145000231F0 /* KSUserService.swift */; };
+		17E13ADA1F56B378008EE89A /* KSHomePicSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E13AD91F56B378008EE89A /* KSHomePicSampleModel.swift */; };
 		207F79050776C0E529BAECDA /* Pods_KSDetectionPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C1EA0DD656AD4D8C49938A /* Pods_KSDetectionPlatformTests.framework */; };
 		7F2C8E5714732C270CCAAC32 /* Pods_KSDetectionPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584BEFD0775AEBD53BD0C605 /* Pods_KSDetectionPlatform.framework */; };
 		A159B703F284C6B1ACBA8415 /* Pods_KSDetectionPlatformUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A19CF2B6D81C805435DDE5 /* Pods_KSDetectionPlatformUITests.framework */; };
@@ -120,6 +124,9 @@
 		172B235E1F177D9C00FF9090 /* KSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseViewController.swift; sourceTree = "<group>"; };
 		172B235F1F177D9C00FF9090 /* KSNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSNavigationViewController.swift; sourceTree = "<group>"; };
 		172B23631F177DC200FF9090 /* KSConstMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSConstMacros.swift; sourceTree = "<group>"; };
+		17374E441F556ABA00E5EDC6 /* KSHomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeService.swift; sourceTree = "<group>"; };
+		17374E471F556B0F00E5EDC6 /* KSHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeModel.swift; sourceTree = "<group>"; };
+		17374E4A1F556DC800E5EDC6 /* KSHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeViewModel.swift; sourceTree = "<group>"; };
 		174157A41F4428AF002DEAF8 /* KSUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSUserModel.swift; sourceTree = "<group>"; };
 		174157A61F442D46002DEAF8 /* KSGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSGlobal.swift; sourceTree = "<group>"; };
 		174157A91F444315002DEAF8 /* JZGOffice_Home_BannerDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JZGOffice_Home_BannerDefault.png; sourceTree = "<group>"; };
@@ -160,6 +167,7 @@
 		17770DC01F414DC0000231F0 /* KSBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSBaseViewModel.swift; sourceTree = "<group>"; };
 		17770DC31F414E3C000231F0 /* KSUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSUserViewModel.swift; sourceTree = "<group>"; };
 		17770DC71F41B145000231F0 /* KSUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSUserService.swift; sourceTree = "<group>"; };
+		17E13AD91F56B378008EE89A /* KSHomePicSampleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomePicSampleModel.swift; sourceTree = "<group>"; };
 		1C5516E89E795D552B281B59 /* Pods-KSDetectionPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDetectionPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSDetectionPlatform/Pods-KSDetectionPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 		584BEFD0775AEBD53BD0C605 /* Pods_KSDetectionPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSDetectionPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		616272B6317CED254172B71F /* Pods-KSDetectionPlatformTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDetectionPlatformTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSDetectionPlatformTests/Pods-KSDetectionPlatformTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -336,6 +344,7 @@
 			children = (
 				176ADCC41F429B72007C7B8E /* KSBaseModel.swift */,
 				174157A31F4428AF002DEAF8 /* KSUserModel */,
+				17374E461F556AE700E5EDC6 /* KSHomeModel */,
 			);
 			path = KSModel;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 				176ADCC01F429064007C7B8E /* KSBaseService.swift */,
 				17671DE91F3B19E2009A70D4 /* KSServiceTool.swift */,
 				1728E2D91F3C3C2000A98288 /* KSUserService */,
+				17374E3F1F5569F000E5EDC6 /* KSHomeService */,
 			);
 			path = KSService;
 			sourceTree = "<group>";
@@ -393,6 +403,7 @@
 			children = (
 				17770DC01F414DC0000231F0 /* KSBaseViewModel.swift */,
 				17770DC21F414E1F000231F0 /* KSUserViewModel */,
+				17374E491F556DA700E5EDC6 /* KSHomeViewModel */,
 			);
 			path = KSViewModel;
 			sourceTree = "<group>";
@@ -463,6 +474,31 @@
 				172B235B1F1779AA00FF9090 /* KSLoginViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		17374E3F1F5569F000E5EDC6 /* KSHomeService */ = {
+			isa = PBXGroup;
+			children = (
+				17374E441F556ABA00E5EDC6 /* KSHomeService.swift */,
+			);
+			path = KSHomeService;
+			sourceTree = "<group>";
+		};
+		17374E461F556AE700E5EDC6 /* KSHomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				17374E471F556B0F00E5EDC6 /* KSHomeModel.swift */,
+				17E13AD91F56B378008EE89A /* KSHomePicSampleModel.swift */,
+			);
+			path = KSHomeModel;
+			sourceTree = "<group>";
+		};
+		17374E491F556DA700E5EDC6 /* KSHomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17374E4A1F556DC800E5EDC6 /* KSHomeViewModel.swift */,
+			);
+			path = KSHomeViewModel;
 			sourceTree = "<group>";
 		};
 		174157A31F4428AF002DEAF8 /* KSUserModel */ = {
@@ -871,11 +907,13 @@
 				174157E51F4459FF002DEAF8 /* KSNavSearchView.swift in Sources */,
 				176ADCC51F429B72007C7B8E /* KSBaseModel.swift in Sources */,
 				176ADCC11F429064007C7B8E /* KSBaseService.swift in Sources */,
+				17E13ADA1F56B378008EE89A /* KSHomePicSampleModel.swift in Sources */,
 				17770DC81F41B145000231F0 /* KSUserService.swift in Sources */,
 				174157E31F4459D5002DEAF8 /* KSNavCustomView.swift in Sources */,
 				17770DC41F414E3C000231F0 /* KSUserViewModel.swift in Sources */,
 				172A0F151F205DD80035AEE8 /* KSTools.swift in Sources */,
 				17770DC11F414DC0000231F0 /* KSBaseViewModel.swift in Sources */,
+				17374E481F556B0F00E5EDC6 /* KSHomeModel.swift in Sources */,
 				17671DEA1F3B19E2009A70D4 /* KSServiceTool.swift in Sources */,
 				172B23641F177DC200FF9090 /* KSConstMacros.swift in Sources */,
 				174157A71F442D46002DEAF8 /* KSGlobal.swift in Sources */,
@@ -885,7 +923,9 @@
 				172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */,
 				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,
 				172A0F1C1F209D120035AEE8 /* KSLoginView.swift in Sources */,
+				17374E451F556ABA00E5EDC6 /* KSHomeService.swift in Sources */,
 				172A0F131F1F6A6D0035AEE8 /* KSHomeViewController.swift in Sources */,
+				17374E4B1F556DC800E5EDC6 /* KSHomeViewModel.swift in Sources */,
 				1777011F1F2873D100A9725B /* KSSettingViewController.swift in Sources */,
 				174157EB1F449942002DEAF8 /* KSMsgCenterViewController.swift in Sources */,
 			);
