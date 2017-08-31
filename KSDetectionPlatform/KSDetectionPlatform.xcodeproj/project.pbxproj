@@ -31,6 +31,7 @@
 		17374E451F556ABA00E5EDC6 /* KSHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374E441F556ABA00E5EDC6 /* KSHomeService.swift */; };
 		17374E481F556B0F00E5EDC6 /* KSHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374E471F556B0F00E5EDC6 /* KSHomeModel.swift */; };
 		17374E4B1F556DC800E5EDC6 /* KSHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374E4A1F556DC800E5EDC6 /* KSHomeViewModel.swift */; };
+		173D56801F57AA75002864AF /* KSSettingMsgListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D567F1F57AA75002864AF /* KSSettingMsgListModel.swift */; };
 		174157A51F4428AF002DEAF8 /* KSUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174157A41F4428AF002DEAF8 /* KSUserModel.swift */; };
 		174157A71F442D46002DEAF8 /* KSGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174157A61F442D46002DEAF8 /* KSGlobal.swift */; };
 		174157C51F444315002DEAF8 /* JZGOffice_Home_BannerDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 174157A91F444315002DEAF8 /* JZGOffice_Home_BannerDefault.png */; };
@@ -130,6 +131,7 @@
 		17374E441F556ABA00E5EDC6 /* KSHomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeService.swift; sourceTree = "<group>"; };
 		17374E471F556B0F00E5EDC6 /* KSHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeModel.swift; sourceTree = "<group>"; };
 		17374E4A1F556DC800E5EDC6 /* KSHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSHomeViewModel.swift; sourceTree = "<group>"; };
+		173D567F1F57AA75002864AF /* KSSettingMsgListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSettingMsgListModel.swift; sourceTree = "<group>"; };
 		174157A41F4428AF002DEAF8 /* KSUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSUserModel.swift; sourceTree = "<group>"; };
 		174157A61F442D46002DEAF8 /* KSGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSGlobal.swift; sourceTree = "<group>"; };
 		174157A91F444315002DEAF8 /* JZGOffice_Home_BannerDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JZGOffice_Home_BannerDefault.png; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 			isa = PBXGroup;
 			children = (
 				17E13ADF1F56C6D3008EE89A /* KSSettingMsgCountModel.swift */,
+				173D567F1F57AA75002864AF /* KSSettingMsgListModel.swift */,
 			);
 			path = KSSettingModel;
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 				174157A71F442D46002DEAF8 /* KSGlobal.swift in Sources */,
 				172B230C1F17737A00FF9090 /* AppDelegate.swift in Sources */,
 				172B23621F177D9C00FF9090 /* KSNavigationViewController.swift in Sources */,
+				173D56801F57AA75002864AF /* KSSettingMsgListModel.swift in Sources */,
 				174157A51F4428AF002DEAF8 /* KSUserModel.swift in Sources */,
 				172B23611F177D9C00FF9090 /* KSBaseViewController.swift in Sources */,
 				172B235C1F1779AA00FF9090 /* KSLoginViewController.swift in Sources */,

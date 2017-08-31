@@ -80,6 +80,11 @@ class KSBaseViewController: UIViewController, UINavigationControllerDelegate {
         self.navigationController?.delegate = self;
     }
 
+    // MARK: - 初始化页面容器内的其他页面
+    public func initContainsView() -> Void {
+
+    }
+
     //MARK: - 导航相关
     private func initNavigationBar() {
         //导航栏返回按钮

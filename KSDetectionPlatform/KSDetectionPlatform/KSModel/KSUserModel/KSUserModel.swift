@@ -42,5 +42,4 @@ class KSUserModel: KSBaseModel {
     var isShowContact:String?
     var IsDL:String?
 
-    required init() {}
 }

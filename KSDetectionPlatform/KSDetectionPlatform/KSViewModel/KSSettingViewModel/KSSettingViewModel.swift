@@ -33,6 +33,25 @@ class KSSettingViewModel: KSBaseViewModel {
             failure(request, error)
         })
     }
+
+    /// 获取消息列表
+    ///
+    /// - Parameters:
+    ///   - pageIndex: 第几页（从1开始）
+    ///   - success: 成功回调
+    ///   - failure: 失败回调
+    func loadMsgList(pageIndex: Int,
+                     success:@escaping successModelBlock<KSSettingMsgListService.ResponseModel>,
+                     failure:@escaping failureModelBlock) -> Void {
+        self.loadRequest(service: KSSettingMsgListService(pageIndex: String(pageIndex)), success: { (request, json) in
+            if let dic:NSDictionary = json as? NSDictionary,
+                let msgListModel = KSSettingMsgListModel.deserialize(from: dic) {
+                success(request, msgListModel)
+            }
+        }, failure: { (request, error) in
+            failure(request, error)
+        })
+    }
     
 
 }

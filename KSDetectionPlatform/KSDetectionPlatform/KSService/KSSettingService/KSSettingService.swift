@@ -19,3 +19,19 @@ struct KSSettingMsgCountService: KSBaseService {
 
     typealias ResponseModel = KSSettingMsgCountModel
 }
+
+
+/// 获取消息列表接口
+struct KSSettingMsgListService: KSBaseService {
+
+    var pageIndex: String
+
+
+    let path:String = "/Api/Message/Get"
+
+    var parameter: Dictionary<String, Any> {
+        return ["pageIndex":pageIndex]
+    }
+
+    typealias ResponseModel = KSSettingMsgListModel
+}

@@ -28,7 +28,7 @@ class KSLoginViewController: KSBaseViewController {
         self.setRightBtn(strTitle: "", hidden: true, imgNor: "", imgSel: "")
     }
 
-    func initContainsView() {
+    override func initContainsView() {
         loginView = KSLoginView(frame: CGRect(x: 0, y: 0, width: kAppWidth, height: kAppHeight))
         loginView.loginButton.addTarget(self, action: #selector(btnLoginDidClick(_:)), for: .touchUpInside)
         self.view.addSubview(loginView)

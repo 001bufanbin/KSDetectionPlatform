@@ -20,12 +20,7 @@ class KSSettingViewController: KSBaseViewController {
         self.initContainsView()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.loadMsgCountRequest()
-    }
-
-    func initContainsView() -> Void {
+    override func initContainsView() -> Void {
         self.initBtnGetMsgCount()
     }
 

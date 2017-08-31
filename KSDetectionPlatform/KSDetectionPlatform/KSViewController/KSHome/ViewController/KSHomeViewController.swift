@@ -18,13 +18,8 @@ class KSHomeViewController: KSBaseViewController {
         self.initContainsView()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.loadHomeInfoRequest()
-    }
-
     // MARK: - init contains view
-    private func initContainsView() -> Void {
+    override func initContainsView() -> Void {
         self.initNavView()
         self.initBtnRefresh()
         self.initBtnPicSample()
