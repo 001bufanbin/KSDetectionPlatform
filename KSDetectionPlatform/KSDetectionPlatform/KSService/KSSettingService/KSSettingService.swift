@@ -26,7 +26,6 @@ struct KSSettingMsgListService: KSBaseService {
 
     var pageIndex: String
 
-
     let path:String = "/Api/Message/Get"
 
     var parameter: Dictionary<String, Any> {

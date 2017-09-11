@@ -38,7 +38,7 @@ class KSSettingViewController: KSBaseViewController {
     private func loadMsgCountRequest() -> Void {
         KSSettingViewModel.share.loadMsgCount(success: { (request, model) in
             self.hiddenLoad()
-            printLog(model.redDot)
+            
         }) { (request, error) in
             self.hiddenLoad()
             self.manageFailStatus()

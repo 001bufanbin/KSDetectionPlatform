@@ -62,9 +62,7 @@ class KSHomeViewController: KSBaseViewController {
     private func loadHomeInfoRequest() -> Void {
         KSHomeViewModel.share.loadHomeInfo(success: { (request, model) in
             self.hiddenLoad()
-            printLog(model.TaskCount)
-            printLog(model.Banner)
-            printLog(model.Statistic)
+            
         }) { (request, error) in
             self.hiddenLoad()
             self.manageFailStatus()

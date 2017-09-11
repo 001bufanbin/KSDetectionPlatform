@@ -36,17 +36,7 @@ class KSMsgCenterViewController: KSBaseViewController {
     private func loadMsgListRequest() -> Void {
         KSSettingViewModel.share.loadMsgList(pageIndex: 1, success: { (request, model) in
             self.hiddenLoad()
-            printLog(model.PageIndex)
-            printLog(model.PageSize)
-            printLog(model.TotalCount)
-            printLog(model.List?.first?.TaskID)
-            printLog(model.List?.first?.OrderStatus)
-            printLog(model.List?.first?.OrderType)
-            printLog(model.List?.first?.TaskVersion)
-            printLog(model.List?.first?.Content)
-            printLog(model.List?.first?.Title)
-            printLog(model.List?.first?.ID)
-            printLog(model.List?.first?.CreateTime)
+            
         }) { (request, error) in
             self.hiddenLoad()
             self.manageFailStatus()
